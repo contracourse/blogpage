@@ -1,0 +1,4 @@
+baseURL: "https://contracourse.github.io/blogpage/"
+languageCode: en-us
+title: My New Hugo Site
+theme: PaperMod
