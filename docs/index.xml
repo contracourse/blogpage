@@ -6,7 +6,16 @@
     <description>Recent content in Docs on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Apr 2023 17:46:13 +0200</lastBuildDate><atom:link href="https://contracourse.github.io/blogpage/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Apr 2023 18:29:50 +0200</lastBuildDate><atom:link href="https://contracourse.github.io/blogpage/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bayesian Additive Regression Trees</title>
+      <link>https://contracourse.github.io/blogpage/docs/bart/</link>
+      <pubDate>Sun, 09 Apr 2023 18:29:50 +0200</pubDate>
+      
+      <guid>https://contracourse.github.io/blogpage/docs/bart/</guid>
+      <description>In this post i&amp;rsquo;m going to descripe</description>
+    </item>
+    
     <item>
       <title>Test</title>
       <link>https://contracourse.github.io/blogpage/docs/test/</link>
