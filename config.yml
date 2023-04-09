@@ -2,3 +2,9 @@ baseURL: "https://contracourse.github.io/blogpage/"
 languageCode: en-us
 title: Kai's Blogsite
 theme: PaperMod
+
+params:
+    homeInfoParams:
+        Title: Hi there wave
+        Content: Can be Info, links, about...
+
