@@ -61,7 +61,7 @@ params:
     - name: github
       url: "https://github.com/contracourse"
     - name: email
-      url: "mailto://kai.bruening@mailbox.org"
+      url: "mailto:kai.bruening@mailbox.org"
 
   analytics:
     google:
