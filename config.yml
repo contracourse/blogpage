@@ -29,7 +29,7 @@ params:
   tocopen: false
 
   label:
-    text: "Kais Blog"
+    text: "Kai's Blog"
     icon: "images/coding.png"
     iconHeight: 35
 
@@ -57,11 +57,11 @@ params:
 
   socialIcons:
     - name: linkedin
-      url: "https://www.linkedin.com/in/Kai-nantasenamat/"
+      url: "http://www.linkedin.com/in/kai-brüning-751b63192"
     - name: github
-      url: "https://github.com/dataprofessor"
+      url: "https://github.com/contracourse"
     - name: email
-      url: "/..."
+      url: "mailto://kai.bruening@mailbox.org"
 
   analytics:
     google:
