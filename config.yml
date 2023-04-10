@@ -4,18 +4,11 @@ title: Kai's Blogsite
 theme: PaperMod
 
 params:
-    homeInfoParams:
-        Title: Hi there wave
-        Content: Can be Info, links, about...
-
-
-
-params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ChaninNantasenamat
-  description: "This is the website of Chanin Nantasenamat, Ph.D. and I create educational content on data science. Some of you may know me as the **Data Professor**."
-  keywords: [Blog, Portfolio, Data Science]
-  author: Chanin Nantasenamat
+  title: Kais Blog
+  description: "This is the website of Kai Brüning, BSc. and I create content on finance and data science"
+  keywords: [Blog, Economics, Finance, Data Science]
+  author: Kai Brüning
   # author: ["Me", "You"] # multiple authors
   #images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
@@ -36,7 +29,7 @@ params:
   tocopen: false
 
   label:
-    text: "Chanin Nantasenamat"
+    text: "Kai Brüning"
     icon: "images/coding.png"
     iconHeight: 35
 
@@ -44,40 +37,30 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: "Welcome! \U0001F44B"
-    subtitle: "This is the website of **Chanin Nantasenamat, Ph.D.** and
-    I create educational content on data science and bioinformatics.
-    Some of you may know me as the **Data Professor**."
+    subtitle: "This is the website of **Kai Brüning** and
+    I create content and I create content on finance and data science."
     imageUrl: "images/dp.png"
     imageWidth: 120
     imageHeight: 120
     imageTitle: "Data Professor"
     buttons:
       - name: Blogs
-        url: blogs
+        url: docs
       - name: Projects
         url: projects
 
   # home-info mode
   homeInfoParams:
     Title: "Welcome! \U0001F44B"
-    Content: "This is the website of **Chanin Nantasenamat, Ph.D.** and
-    I create educational content on data science and bioinformatics.
-    Some of you may know me as the **Data Professor**."
+    Content: "This is the website of **Kai Brüning** and
+    I create content and I create content on finance and data science."
 
   socialIcons:
-    - name: youtube
-      url: "http://youtube.com/dataprofessor"
-    - name: medium
-      url: "https://medium.com/@data-professor"
-    - name: twitter
-      url: "https://twitter.com/thedataprof"
     - name: linkedin
-      url: "https://www.linkedin.com/in/chanin-nantasenamat/"
+      url: "https://www.linkedin.com/in/Kai-nantasenamat/"
     - name: github
       url: "https://github.com/dataprofessor"
-    - name: buymeacoffee
-      url: "https://www.buymeacoffee.com/dataprofessor"
-
+    
   analytics:
     google:
       SiteVerificationTag: "XYZabc"
@@ -93,7 +76,7 @@ params:
 
 
   editPost:
-#    URL: "https://github.com/chanin-www/content"
+#    URL: "https://github.com/Kai-www/content"
 #    Text: "Suggest Changes" # edit text
     URL: ""
     Text: "" # edit text
