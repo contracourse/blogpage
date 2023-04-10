@@ -29,7 +29,7 @@ params:
   tocopen: false
 
   label:
-    text: "Kai Brüning"
+    text: "Kais Blog"
     icon: "images/coding.png"
     iconHeight: 35
 
@@ -60,7 +60,9 @@ params:
       url: "https://www.linkedin.com/in/Kai-nantasenamat/"
     - name: github
       url: "https://github.com/dataprofessor"
-    
+    - name: email
+      url: "/..."
+
   analytics:
     google:
       SiteVerificationTag: "XYZabc"
@@ -106,10 +108,10 @@ menu:
       name: Projects
       url: /projects/
       weight: 2
-    - identifier: infographics
-      name: Infographics
-      url: /infographics/
-      weight: 3
+    # - identifier: infographics
+    #   name: Infographics
+    #   url: /infographics/
+    #   weight: 3
     #- identifier: tags
     #  name: tags
     #  url: /tags/
