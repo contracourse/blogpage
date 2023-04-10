@@ -1,6 +1,6 @@
 baseURL: "https://contracourse.github.io/blogpage/"
 languageCode: en-us
-title: Kai's Blogsite
+title: Blog
 theme: PaperMod
 
 params:
@@ -29,8 +29,8 @@ params:
   tocopen: false
 
   label:
-    text: "Kai's Blog"
-    icon: "images/coding.png"
+    # text: "Blog"
+    # icon: "images/8750.jpg"
     iconHeight: 35
 
   # profile-mode
@@ -39,7 +39,7 @@ params:
     title: "Welcome! \U0001F44B"
     subtitle: "This is the website of **Kai Brüning** and
     I create content and I create content on finance and data science."
-    imageUrl: "images/dp.png"
+    imageUrl: "images/8750.png"
     imageWidth: 120
     imageHeight: 120
     imageTitle: "Data Professor"
@@ -62,6 +62,8 @@ params:
       url: "https://github.com/contracourse"
     - name: email
       url: "mailto:kai.bruening@mailbox.org"
+    # - name: telegram
+    #   url: "https://t.me/kairrb"
 
   analytics:
     google:
