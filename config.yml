@@ -4,6 +4,13 @@ title: Kai's Blogsite
 theme: PaperMod
 
 params:
+    homeInfoParams:
+        Title: Hi there wave
+        Content: Can be Info, links, about...
+
+
+
+params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: ChaninNantasenamat
   description: "This is the website of Chanin Nantasenamat, Ph.D. and I create educational content on data science. Some of you may know me as the **Data Professor**."
@@ -110,7 +117,7 @@ menu:
       weight: 4
     - identifier: blog
       name: Blogs
-      url: /blogs/
+      url: /docs/
       weight: 1
     - identifier: projects
       name: Projects
