@@ -49,6 +49,13 @@ params:
       - name: Projects
         url: projects
 
+markup:
+  goldmark:
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xhtml: false
+
   # home-info mode
   homeInfoParams:
     Title: "Welcome! \U0001F44B"
