@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<<<<<<< HEAD
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on Kai&#39;s Blogsite</title>
     <link>https://contracourse.github.io/blogpage/docs/</link>
     <description>Recent content in Docs on Kai&#39;s Blogsite</description>
+=======
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Docs on Blog</title>
+    <link>https://contracourse.github.io/blogpage/docs/</link>
+    <description>Recent content in Docs on Blog</description>
+>>>>>>> 7da7073077f7946f2f6d9b98f4dacfd667753cb1
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Apr 2023 18:38:43 +0200</lastBuildDate><atom:link href="https://contracourse.github.io/blogpage/docs/index.xml" rel="self" type="application/rss+xml" />
