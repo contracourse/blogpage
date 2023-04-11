@@ -3,7 +3,7 @@ title: "Banking"
 date: 2023-04-09T18:38:43+02:00
 draft: false
 ---
-<span style="font-size:14.5px;">
+<span style="font-size:15px;">
 
 80% of bank in lending in the US und the UK are mortgages, because the
 general prosperity is raising therefore pushing up property prices in
