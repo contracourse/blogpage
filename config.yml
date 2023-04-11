@@ -34,20 +34,20 @@ params:
     iconHeight: 35
 
   # profile-mode
-  profileMode:
+  homeInfoParams:
     enabled: true # needs to be explicitly set
     title: "Welcome! \U0001F44B"
-    subtitle: "This is the website of **Kai Brüning** and
+    Content: "This is the website of **Kai Brüning** and
     I create content on finance and Machine Learning."
-    imageUrl: "images/8750.png"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: "Data Professor"
-    buttons:
-      - name: Blogs
-        url: docs
-      - name: Projects
-        url: projects
+  socialIcons:
+    - name: linkedin
+      url: "http://www.linkedin.com/in/kai-brüning-751b63192"
+    - name: github
+      url: "https://github.com/contracourse"
+    - name: email
+      url: "mailto:kai.bruening@mailbox.org"
+    # - name: telegram
+    #   url: "https://t.me/kairrb"
 
 markup:
   goldmark:
@@ -62,15 +62,7 @@ markup:
     Content: "This is the website of **Kai Brüning** and
     I create content and I create content on finance and Machine Learning."
 
-  socialIcons:
-    - name: linkedin
-      url: "http://www.linkedin.com/in/kai-brüning-751b63192"
-    - name: github
-      url: "https://github.com/contracourse"
-    - name: email
-      url: "mailto:kai.bruening@mailbox.org"
-    # - name: telegram
-    #   url: "https://t.me/kairrb"
+
 
   analytics:
     google:
