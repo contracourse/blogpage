@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kai&#39;s Blogsite</title>
+    <link>https://contracourse.github.io/blogpage/</link>
+    <description>Recent content on Kai&#39;s Blogsite</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Apr 2023 18:38:43 +0200</lastBuildDate><atom:link href="https://contracourse.github.io/blogpage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Banking</title>
+      <link>https://contracourse.github.io/blogpage/docs/banking/</link>
+      <pubDate>Sun, 09 Apr 2023 18:38:43 +0200</pubDate>
+      
+      <guid>https://contracourse.github.io/blogpage/docs/banking/</guid>
+      <description>The key to understand the financial sector&amp;rsquo;s strategy is that its activities and revenue do not constitute a part of real economic growth, but a subtrahend paid out of the economic surplus.
+Most of the wealth for families has stemmed from the debt-leveraged price of their homes. Because financialization has created an enormous rise in the value of assets on nations&#39; balance sheets. The motivation has been less to earn a profit on tangible capital investment than to generate &amp;ldquo;capital&amp;rdquo; gains.</description>
+    </item>
+    
+    <item>
+      <title>Bayesian Additive Regression Trees</title>
+      <link>https://contracourse.github.io/blogpage/docs/bart/</link>
+      <pubDate>Sun, 09 Apr 2023 18:29:50 +0200</pubDate>
+      
+      <guid>https://contracourse.github.io/blogpage/docs/bart/</guid>
+      <description>In this post i&amp;rsquo;m going to descripe
+Wrote this on my desktop</description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://contracourse.github.io/blogpage/docs/test/</link>
+      <pubDate>Sun, 09 Apr 2023 17:46:13 +0200</pubDate>
+      
+      <guid>https://contracourse.github.io/blogpage/docs/test/</guid>
+      <description>This is a testpage This is a test</description>
+    </item>
+    
+  </channel>
+</rss>
