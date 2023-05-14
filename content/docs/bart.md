@@ -2,6 +2,7 @@
 title: "Bayesian Additive Regression Trees in R"
 date: 2023-04-09T18:29:50+02:00
 draft: false
+math: true
 ---
 
 ## Introduction
@@ -58,3 +59,7 @@ sample data from the FRED database and I'm trying to develop a model for
 predicting the SPY based on some underlying economic data. Finally, I
 will compare the BART algorithm with the most common gradient boosting
 algorithm.
+
+```{r snippetName, echo=F}
+plot(df$x, df$y)
+```
