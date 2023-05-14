@@ -2,7 +2,7 @@
 title: "Bayesian Additive Regression Trees in R"
 date: 2023-04-09T18:29:50+02:00
 draft: false
-math: true
+katex: ture
 ---
 
 ## Introduction
