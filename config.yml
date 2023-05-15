@@ -27,7 +27,6 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
-  renderMathInElement: true
 
   label:
     # text: "Blog"

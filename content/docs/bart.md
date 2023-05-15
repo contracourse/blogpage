@@ -22,17 +22,6 @@ towards statistics. The Bayesian approach treats the models in terms of
 a probability distribution, instead of giving you an exact output
 parameter.
 
-...
-    onload="renderMathInElement(document.body, 
-    {
-              delimiters: [
-                  {left: '$$', right: '$$', display: true},
-                  {left: '\\[', right: '\\]', display: true},
-                  {left: '$', right: '$', display: false},
-                  {left: '\\(', right: '\\)', display: false}
-              ]
-          }
-    );"></script>
 
 We can use a Bayesian approach to determine the model parameters. This
 approach allows us to incorporate our prior beliefs about the shape of
