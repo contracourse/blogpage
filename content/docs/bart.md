@@ -8,11 +8,6 @@ math: true
 
 ## Introduction
 
-<<<<<<< HEAD
-Wrote this on my desktop
-test
-new
-=======
 Gradient boosting methods are commonly used in the Machine Learning
 field. It's a rather straight forward process as it utilized "tree
 boosting" optimization methods by combining random forest algorithms
@@ -69,4 +64,3 @@ algorithm.
 ```{r snippetName, echo=F}
 plot(df$x, df$y)
 ```
->>>>>>> d9653aefb0c0508912a445f184c988071851a743
