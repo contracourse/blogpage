@@ -5,6 +5,7 @@ draft: false
 katex: true
 math: true
 ---
+<span style="font-size:15px;">
 
 ## Introduction
 
@@ -65,3 +66,8 @@ algorithm.
 ```{r snippetName, echo=F}
 plot(df$x, df$y)
 ```
+
+
+
+
+</span>
