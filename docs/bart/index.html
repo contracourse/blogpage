@@ -8,7 +8,7 @@
 <title>Bayesian Additive Regression Trees in R | Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="Introduction Gradient boosting methods are commonly used in the Machine Learning field. It&rsquo;s a rather straight forward process as it utilized &ldquo;tree boosting&rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.
-$$O=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}i)}{\text{error term}} \quad &#43; \underbrace{\sum_{j=1}^J\Omega(T_j)}_{\text{regularization term}}$$
+$$\sum{P[A \frac B]}$$ $$\underbrace$$
 $$P[A|B]=\frac{P[A \cap B]}{P[B]}$$
 Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.">
 <meta name="author" content="Kai Brüning">
@@ -59,9 +59,28 @@ Most common machine learning algorithms are using a similar basic objective func
         }
 
     </style>
-</noscript><meta property="og:title" content="Bayesian Additive Regression Trees in R" />
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY" crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false}
+        ]
+    });
+});
+</script>
+<meta property="og:title" content="Bayesian Additive Regression Trees in R" />
 <meta property="og:description" content="Introduction Gradient boosting methods are commonly used in the Machine Learning field. It&rsquo;s a rather straight forward process as it utilized &ldquo;tree boosting&rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.
-$$O=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}i)}{\text{error term}} \quad &#43; \underbrace{\sum_{j=1}^J\Omega(T_j)}_{\text{regularization term}}$$
+$$\sum{P[A \frac B]}$$ $$\underbrace$$
 $$P[A|B]=\frac{P[A \cap B]}{P[B]}$$
 Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics." />
 <meta property="og:type" content="article" />
@@ -72,7 +91,7 @@ Most common machine learning algorithms are using a similar basic objective func
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bayesian Additive Regression Trees in R"/>
 <meta name="twitter:description" content="Introduction Gradient boosting methods are commonly used in the Machine Learning field. It&rsquo;s a rather straight forward process as it utilized &ldquo;tree boosting&rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.
-$$O=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}i)}{\text{error term}} \quad &#43; \underbrace{\sum_{j=1}^J\Omega(T_j)}_{\text{regularization term}}$$
+$$\sum{P[A \frac B]}$$ $$\underbrace$$
 $$P[A|B]=\frac{P[A \cap B]}{P[B]}$$
 Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics."/>
 
@@ -103,12 +122,12 @@ Most common machine learning algorithms are using a similar basic objective func
   "@type": "BlogPosting",
   "headline": "Bayesian Additive Regression Trees in R",
   "name": "Bayesian Additive Regression Trees in R",
-  "description": "Introduction Gradient boosting methods are commonly used in the Machine Learning field. It\u0026rsquo;s a rather straight forward process as it utilized \u0026ldquo;tree boosting\u0026rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.\n$$O=\\underbrace{\\sum_{i=1}^I \\text{loss}(y_i,\\tilde{y}i)}{\\text{error term}} \\quad + \\underbrace{\\sum_{j=1}^J\\Omega(T_j)}_{\\text{regularization term}}$$\n$$P[A|B]=\\frac{P[A \\cap B]}{P[B]}$$\nMost common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.",
+  "description": "Introduction Gradient boosting methods are commonly used in the Machine Learning field. It\u0026rsquo;s a rather straight forward process as it utilized \u0026ldquo;tree boosting\u0026rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.\n$$\\sum{P[A \\frac B]}$$ $$\\underbrace$$\n$$P[A|B]=\\frac{P[A \\cap B]}{P[B]}$$\nMost common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.",
   "keywords": [
     
   ],
-  "articleBody": " Introduction Gradient boosting methods are commonly used in the Machine Learning field. It’s a rather straight forward process as it utilized “tree boosting” optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.\n$$O=\\underbrace{\\sum_{i=1}^I \\text{loss}(y_i,\\tilde{y}i)}{\\text{error term}} \\quad + \\underbrace{\\sum_{j=1}^J\\Omega(T_j)}_{\\text{regularization term}}$$\n$$P[A|B]=\\frac{P[A \\cap B]}{P[B]}$$\nMost common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics. The Bayesian approach treats the models in terms of a probability distribution, instead of giving you an exact output parameter.\nWe can use a Bayesian approach to determine the model parameters. This approach allows us to incorporate our prior beliefs about the shape of trees and the overall ensemble structure into the model. After that, the algorithm will update the priors based on the data using an MCMC back-fitting technique.\nBART utilizes similar tree boosting methods but through a Bayesian framework where predictions are drawn from a posterior distribution, which is a probability distribution of model parameters given the observed data.\nAdditive regression trees have splitting nodes that gives you smaller prediction spaces and by adding them up it gives you get a better picture of the overall prediction space. You have a bunch of weak learners to get a clear picture of the whole. You are taking each small part of the regression tree that outputs a weak learner by itself and adding them up to get a bigger picture. To address the overfitting problem, the Bayesian approach here penalize against it through regularization prior, in the same the regularization term does in the boosting algorithm. Data goes through each tree, only the residual flows to the next tree, the regularization prior balances the data in order to prevent overfitting.\nBART uses non-parametric regression models which is commonly used when relationships between variables are more complex and difficult to express. Non-parametric can also be useful for exploratory data analysis, as they can help to identify patterns and relationships that may not be apparent with simple summary statistics.\nApproach In this post I will use the R Package “bartMachine” demonstrate the effectiveness of BART. bartMachine provides some interesting diagnostic features which I will describe later. I will have drawn some sample data from the FRED database and I’m trying to develop a model for predicting the SPY based on some underlying economic data. Finally, I will compare the BART algorithm with the most common gradient boosting algorithm.\nplot(df$x, df$y) ",
-  "wordCount" : "414",
+  "articleBody": " Introduction Gradient boosting methods are commonly used in the Machine Learning field. It’s a rather straight forward process as it utilized “tree boosting” optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.\n$$\\sum{P[A \\frac B]}$$ $$\\underbrace$$\n$$P[A|B]=\\frac{P[A \\cap B]}{P[B]}$$\nMost common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics. The Bayesian approach treats the models in terms of a probability distribution, instead of giving you an exact output parameter.\nWe can use a Bayesian approach to determine the model parameters. This approach allows us to incorporate our prior beliefs about the shape of trees and the overall ensemble structure into the model. After that, the algorithm will update the priors based on the data using an MCMC back-fitting technique.\nBART utilizes similar tree boosting methods but through a Bayesian framework where predictions are drawn from a posterior distribution, which is a probability distribution of model parameters given the observed data.\nAdditive regression trees have splitting nodes that gives you smaller prediction spaces and by adding them up it gives you get a better picture of the overall prediction space. You have a bunch of weak learners to get a clear picture of the whole. You are taking each small part of the regression tree that outputs a weak learner by itself and adding them up to get a bigger picture. To address the overfitting problem, the Bayesian approach here penalize against it through regularization prior, in the same the regularization term does in the boosting algorithm. Data goes through each tree, only the residual flows to the next tree, the regularization prior balances the data in order to prevent overfitting.\nBART uses non-parametric regression models which is commonly used when relationships between variables are more complex and difficult to express. Non-parametric can also be useful for exploratory data analysis, as they can help to identify patterns and relationships that may not be apparent with simple summary statistics.\nApproach In this post I will use the R Package “bartMachine” demonstrate the effectiveness of BART. bartMachine provides some interesting diagnostic features which I will describe later. I will have drawn some sample data from the FRED database and I’m trying to develop a model for predicting the SPY based on some underlying economic data. Finally, I will compare the BART algorithm with the most common gradient boosting algorithm.\nplot(df$x, df$y) ",
+  "wordCount" : "411",
   "inLanguage": "en",
   "datePublished": "2023-04-09T18:29:50+02:00",
   "dateModified": "2023-04-09T18:29:50+02:00",
@@ -209,7 +228,8 @@ field. It&rsquo;s a rather straight forward process as it utilized &ldquo;tree
 boosting&rdquo; optimization methods by combining random forest algorithms
 with a learning rate. Gradient boosting algorithms are seeking to
 minimize an objective function.</p>
-<p>$$O=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}<em>i)}</em>{\text{error term}} \quad + \underbrace{\sum_{j=1}^J\Omega(T_j)}_{\text{regularization term}}$$</p>
+<p>$$\sum{P[A \frac B]}$$
+$$\underbrace$$</p>
 <p>$$P[A|B]=\frac{P[A \cap B]}{P[B]}$$</p>
 <p>Most common machine learning algorithms are using a similar basic
 objective function which is based on a <em><strong>frequentist approach</strong></em>
