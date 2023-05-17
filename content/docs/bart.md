@@ -17,6 +17,8 @@ minimize an objective function.
 
 $$O=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)}_{\text{error term}} \quad + \underbrace{\sum_{j=1}^J\Omega(T_j)}_{\text{regularization term}}$$
 
+$$P[A|B]=\frac{P[A \cap B]}{P[B]}$$
+
 Most common machine learning algorithms are using a similar basic
 objective function which is based on a ***frequentist approach***
 towards statistics. The Bayesian approach treats the models in terms of
