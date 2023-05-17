@@ -115,7 +115,9 @@ problem, the Bayesian approach here penalize against it through
 regularization prior, in the same the regularization term does in the
 boosting algorithm. Data goes through each tree, only the residual flows
 to the next tree, the regularization prior balances the data in order to
-prevent overfitting.
+prevent overfitting. 
+
+test
 
 BART uses non-parametric regression models which is commonly used when
 relationships between variables are more complex and difficult to
