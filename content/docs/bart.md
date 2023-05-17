@@ -71,7 +71,7 @@ minimize an objective function.
             </mrow>
             <mi>J</mi>
           </munderover>
-          <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+          <mi mathvariant="normal">&#x03BB;<!-- λ --></mi>
           <mo stretchy="false">(</mo>
           <msub>
             <mi>T</mi>
@@ -86,7 +86,6 @@ minimize an objective function.
       <mtext>regularization term</mtext>
     </mrow>
   </munder>
-  <mo>.</mo>
 </math>
 
 Most common machine learning algorithms are using a similar basic
