@@ -15,7 +15,8 @@ boosting" optimization methods by combining random forest algorithms
 with a learning rate. Gradient boosting algorithms are seeking to
 minimize an objective function.
 
-$$O=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)}_{\text{error term}} \quad + \underbrace{\sum_{j=1}^J\Omega(T_j)}_{\text{regularization term}}$$
+$$\sum{P[A \frac B]}$$
+$$\underbrace$$
 
 $$P[A|B]=\frac{P[A \cap B]}{P[B]}$$
 

@@ -27,6 +27,7 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
+  math: true
 
   label:
     # text: "Blog"
