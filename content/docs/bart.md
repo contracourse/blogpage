@@ -15,17 +15,85 @@ boosting" optimization methods by combining random forest algorithms
 with a learning rate. Gradient boosting algorithms are seeking to
 minimize an objective function.
 
-$$\sum{P[A \frac B]}$$
-$$\underbrace$$
-
-$$P[A|B]=\frac{P[A \cap B]}{P[B]}$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>O</mi>
+  <mo>=</mo>
+  <munder>
+    <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+      <munder>
+        <mrow>
+          <munderover>
+            <mo>&#x2211;<!-- ∑ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>I</mi>
+          </munderover>
+          <mtext>loss</mtext>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>y</mi>
+            <mi>i</mi>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+                <mi>y</mi>
+                <mo stretchy="false">&#x007E;<!-- ~ --></mo>
+              </mover>
+            </mrow>
+            <mi>i</mi>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>&#x23DF;<!-- ⏟ --></mo>
+      </munder>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mtext>error term</mtext>
+    </mrow>
+  </munder>
+  <mspace width="1em" />
+  <mo>+</mo>
+  <munder>
+    <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+      <munder>
+        <mrow>
+          <munderover>
+            <mo>&#x2211;<!-- ∑ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>j</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>J</mi>
+          </munderover>
+          <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>T</mi>
+            <mi>j</mi>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>&#x23DF;<!-- ⏟ --></mo>
+      </munder>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mtext>regularization term</mtext>
+    </mrow>
+  </munder>
+  <mo>.</mo>
+</math>
 
 Most common machine learning algorithms are using a similar basic
 objective function which is based on a ***frequentist approach***
 towards statistics. The Bayesian approach treats the models in terms of
 a probability distribution, instead of giving you an exact output
 parameter.
-
 
 We can use a Bayesian approach to determine the model parameters. This
 approach allows us to incorporate our prior beliefs about the shape of
