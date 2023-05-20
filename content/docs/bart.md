@@ -18,7 +18,7 @@ minimize an objective function.
 $$
 \begin{align}
   \tag{1}
-E [y - \tilde{y}]^2 = \sum_{j=1}^J\sum_{i=1}^I \underbrace{\text{loss} (y_i, \tilde{y}_i)^2} _ { \text{error term}} \quad   + \underbrace{\lambda(T_j)} _ \text{regularization term}
+O_{ij} = \sum_{i=1}^J\sum_{j=1}^I \underbrace{\text{loss} (y_i, \tilde{y}_i)^2} _ { \text{error term}} \quad   + \underbrace{\lambda(T_j)} _ \text{regularization term}
 \end{align}
 $$
 
@@ -56,12 +56,6 @@ relationships between variables are more complex and difficult to
 express. Non-parametric can also be useful for exploratory data
 analysis, as they can help to identify patterns and relationships that
 may not be apparent with simple summary statistics.
-
-$$
-\begin{align}
-O_{ij} = \sum_{i=1}^Jloss(y_i, \tilde{y}_i) + \sum_{j=1}^I\lambda(T_j),\\
-\end{align}
-$$
 
 ## Approach
 
