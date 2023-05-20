@@ -31,7 +31,7 @@ parameter.
 $$
 \begin{align}
   \tag{1.1}
-E [y - \tilde{y}] = \underbrace{\sum_{i=1}^I \text{loss} (y_i, \tilde{y}_i)} _ { \text{error term}}   & + \quad \lambda(T_j) _ \text{regularization term}
+E [y - \tilde{y}] = \underbrace{\sum_{i=1}^I \text{loss} (y_i, \tilde{y}_i)} _ { \text{error term}}   & + \quad \sum_{x=1}^5 \lambda(T_j) _ \text{regularization term}
 \end{align}
 $$
 
