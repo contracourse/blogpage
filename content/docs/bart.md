@@ -17,8 +17,9 @@ minimize an objective function.
 
 $$E[y-\tilde{y}]=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)}_{\text{error term}} \quad + \underbrace{\sum_{j=1}^J\lambda(T_j)}_{\text{regularization term}}$$
 
-$$E[y-\tilde{y}] = \sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i) + \sum_{j=1}^J\lambda(T_j)$$
+$$E[y-\tilde{y}] = \sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)+\sum_{j=1}^J\lambda(T_j)$$
 
+$$\underbrace{a+b+c}_{\text{note}}$$
 
 This is an inline equation: $$V_{sphere} = \frac{4}{3}\pi r^3$$,<br>
 Most common machine learning algorithms are using a similar basic
