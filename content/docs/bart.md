@@ -16,7 +16,11 @@ with a learning rate. Gradient boosting algorithms are seeking to
 minimize an objective function.
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+<<<<<<< HEAD
   <mi>E[y-`y]</mi>
+=======
+  <mi>O</mi>
+>>>>>>> 89720ca84ede895a634eaf55c9048baa5532bee4
   <mo>=</mo>
   <munder>
     <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">

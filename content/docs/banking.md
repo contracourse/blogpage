@@ -2,6 +2,8 @@
 title: "Banking"
 date: 2023-04-09T18:38:43+02:00
 draft: false
+math: true
+katex: true
 ---
 <span style="font-size:15px;">
 
