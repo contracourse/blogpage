@@ -51,13 +51,17 @@ boosting algorithm. Data goes through each tree, only the residual flows
 to the next tree, the regularization prior balances the data in order to
 prevent overfitting. 
 
-test
-
 BART uses non-parametric regression models which is commonly used when
 relationships between variables are more complex and difficult to
 express. Non-parametric can also be useful for exploratory data
 analysis, as they can help to identify patterns and relationships that
 may not be apparent with simple summary statistics.
+
+$$
+\begin{align}
+c_{ij} = \sum_{m=-1,1}f(x_{i-m}, y_i) + \sum_{n=-1,1}f(x_i, y_{j-n}),\\
+\end{align}
+$$
 
 ## Approach
 
@@ -70,7 +74,16 @@ will compare the BART algorithm with the most common gradient boosting
 algorithm.
 
 ```{r snippetName, echo=F}
-plot(df$x, df$y)
+> str(data)
+Classes ‘data.table’ and 'data.frame':  264 obs. of  8 variables:
+ $ T10Y3M            : num  -0.1243 0.0937 0.35 1.175 1.6882 ...
+ $ EFFR              : num  6.02 5.51 5.32 4.81 4.23 ...
+ $ UNRATE            : num  4.2 4.2 4.3 4.4 4.3 4.5 4.6 4.9 5 5.3 ...
+ $ STLFSI4           : num  0.453 0.396 0.627 0.723 0.325 ...
+ $ CPIAUCSL_PC1      : num  3.72 3.53 2.98 3.22 3.56 ...
+ $ SPY               : num  90.4 81.8 77 83.8 83.3 ...
+ $ 2y_expec_Inflation: num  0.0265 0.0263 0.0236 0.0258 0.0273 ...
+ $ 1y_real_rate      : num  0.0313 0.0283 0.0362 0.024 0.0186 ...
 ```
 
 
