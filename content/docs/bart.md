@@ -5,7 +5,7 @@ draft: false
 katex: true
 math: true
 ---
-<span style="font-size:15px;">
+<span style="font-size:16px;">
 
 ## Introduction
 
@@ -18,8 +18,15 @@ minimize an objective function.
 $$
 \begin{align}
   \tag{1}
-E [y - \tilde{y}] = \sum_{j=1}^J\sum_{i=1}^I \underbrace{\text{loss} (y_i, \tilde{y}_i)} _ { \text{error term}} \quad   + \underbrace{\lambda(T_j)} _ \text{regularization term}
+E [y - \tilde{y}]^2 = \sum_{j=1}^J\sum_{i=1}^I \underbrace{\text{loss} (y_i, \tilde{y}_i)^2} _ { \text{error term}} \quad   + \underbrace{\lambda(T_j)} _ \text{regularization term}
 \end{align}
+$$
+
+$$
+\begin{equation}
+\tag{5.4}
+\underset{\mathbf{\beta}}{\min} \, \left\{ \sum_{i=1}^I\left(y_i - \sum_{j=1}^J\beta_jx_{i,j} \right)^2+\lambda \sum_{j=1}^J \beta_j^2 \right\},
+\end{equation}
 $$
 
 Most common machine learning algorithms are using a similar basic
