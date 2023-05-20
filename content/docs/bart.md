@@ -15,30 +15,18 @@ boosting" optimization methods by combining random forest algorithms
 with a learning rate. Gradient boosting algorithms are seeking to
 minimize an objective function.
 
-$$E[y-\tilde{y}]=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)}_{\text{error term}}\underbrace{\sum_{j=1}^J\lambda(T_j)}_{\text{regularization term}}$$
-
-$$E[y-\tilde{y}] = \sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)_{\text{error term}}+\left(x^{\smash{2}}\right)$$
-
-$$\underbrace{\sum_{j=1}^J\lambda(T_j)}_{\text{regularization term}}$$
+$$
+\begin{align}
+  \tag{1}
+E [y - \tilde{y}] = \sum_{j=1}^J\sum_{i=1}^I \underbrace{\text{loss} (y_i, \tilde{y}_i)} _ { \text{error term}} \quad   + \underbrace{\lambda(T_j)} _ \text{regularization term}
+\end{align}
+$$
 
 Most common machine learning algorithms are using a similar basic
 objective function which is based on a ***frequentist approach***
 towards statistics. The Bayesian approach treats the models in terms of
 a probability distribution, instead of giving you an exact output
 parameter.
-
-$$
-\begin{align}
-  \tag{1.1}
-E [y - \tilde{y}] = \underbrace{\sum_{i=1}^I \text{loss} (y_i, \tilde{y}_i)} _ { \text{error term}} \quad   + \underbrace{\lambda(T_j)} _ \text{regularization term}
-\end{align}
-$$
-
-$$
-\begin{align}
-E [y - \tilde{y}] = \underbrace{\sum_{i=1}^I \text{loss} (y_i, \tilde{y}_i)} _ { \text{error term}}   & + \quad y_t &= g_t(x_t,v_t)
-\end{align}
-$$
 
 We can use a Bayesian approach to determine the model parameters. This
 approach allows us to incorporate our prior beliefs about the shape of
