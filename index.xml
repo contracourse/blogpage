@@ -25,7 +25,8 @@ Most of the wealth for families has stemmed from the debt-leveraged price of the
       
       <guid>https://contracourse.github.io/blogpage/docs/bart/</guid>
       <description>Introduction Gradient boosting methods are commonly used in the Machine Learning field. It&amp;rsquo;s a rather straight forward process as it utilized &amp;ldquo;tree boosting&amp;rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD E[y-`y] ======= O &gt;&gt;&gt;&gt;&gt;&gt;&gt; 89720ca84ede895a634eaf55c9048baa5532bee4 = &amp;#x2211; i = 1 I loss ( y i , y &amp;#x007E; i ) &amp;#x23DF; error term + &amp;#x2211; j = 1 J &amp;#x03BB; ( T j ) &amp;#x23DF; regularization term Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.</description>
+$$E[y-\tilde{y}]=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}i)}{\text{error term}} \quad + \underbrace{\sum_{j=1}^J\lambda(T_j)}_{\text{regularization term}}$$
+Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.</description>
     </item>
     
     <item>
