@@ -18,7 +18,7 @@ minimize an objective function.
 $$
 \begin{align}
   \tag{1}
-O_{ij} = \sum_{i=1}^J\sum_{j=1}^I \underbrace{\text{loss} (y_i, \tilde{y}_i)^2} _ { \text{error term}} \quad   + \underbrace{\lambda(T_j)} _ \text{regularization term}
+O_{ij} = \sum_{i=1}^I\sum_{j=1}^J \underbrace{\text{loss} (y_i, \tilde{y}_i)^2} _ { \text{error term}} \quad   + \underbrace{\lambda(T_j)} _ \text{regularization term}
 \end{align}
 $$
 
