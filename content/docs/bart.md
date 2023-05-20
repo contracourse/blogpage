@@ -17,7 +17,7 @@ minimize an objective function.
 
 $$E[y-\tilde{y}]=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)}_{\text{error term}} \quad + \underbrace{\sum_{j=1}^J\lambda(T_j)}_{\text{regularization term}}$$
 
-$$E[y-\tilde{y}] = \sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)_{\text{error term}}+\underbrace$$
+$$E[y-\tilde{y}] = \sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)_{\text{error term}}+\underbrace{\sum{j=1}}$$
 
 $$\underbrace{\sum_{j=1}^J\lambda(T_j)}_{\text{regularization term}}$$
 
