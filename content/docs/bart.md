@@ -31,7 +31,7 @@ parameter.
 $$
 \begin{align}
   \tag{1.1}
-E [y - \tilde{y}] = \underbrace{\sum_{i=1}^I \text{loss} (y_i, \tilde{y}_i)} _ { \text{error term}}   & + \quad \sum_{j=1}^J
+E [y - \tilde{y}] = \underbrace{\sum_{i=1}^I \text{loss} (y_i, \tilde{y}_i)} _ { \text{error term}}   & + \quad \lambda(T_j)
 \end{align}
 $$
 
