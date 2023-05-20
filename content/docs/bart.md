@@ -21,7 +21,6 @@ $$E[y-\tilde{y}] = \sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)_{\text{error term}}
 
 $$\underbrace{\sum_{j=1}^J\lambda(T_j)}_{\text{regularization term}}$$
 
-
 This is an inline equation: $$V_{sphere} = \frac{4}{3}\pi r^3$$,<br>
 Most common machine learning algorithms are using a similar basic
 objective function which is based on a ***frequentist approach***
@@ -32,7 +31,7 @@ parameter.
 $$
 \begin{align}
   \tag{1.1}
-  E [y - \tilde{y}] = \underbrace{\sum_{i=1}^I \text{loss} (y_i, \tilde{y}_i)} _ { \text{error term}}+\underbrace{\sum_{i=1}^J}
+E [y - \tilde{y}] = \underbrace{\sum_{i=1}^I \text{loss} (y_i, \tilde{y}_i)} _ { \text{error term}}   & + \quad \underbrace { \sum_{j=1}^J}
 \end{align}
 $$
 
