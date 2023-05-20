@@ -22,13 +22,6 @@ E [y - \tilde{y}]^2 = \sum_{j=1}^J\sum_{i=1}^I \underbrace{\text{loss} (y_i, \ti
 \end{align}
 $$
 
-$$
-\begin{equation}
-\tag{5.4}
-\underset{\mathbf{\beta}}{\min} \, \left\{ \sum_{i=1}^I\left(y_i - \sum_{j=1}^J\beta_jx_{i,j} \right)^2+\lambda \sum_{j=1}^J \beta_j^2 \right\},
-\end{equation}
-$$
-
 Most common machine learning algorithms are using a similar basic
 objective function which is based on a ***frequentist approach***
 towards statistics. The Bayesian approach treats the models in terms of
