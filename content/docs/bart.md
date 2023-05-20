@@ -38,7 +38,7 @@ $$
 
 $$
 \begin{align}
-x_t &= f_t(x_{t-1},u_t)   &  y_t &= g_t(x_t,v_t)
+E[y-\tilde{y}]=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)}_{\text{error term}}   & + \quad y_t &= g_t(x_t,v_t)
 \end{align}
 $$
 
