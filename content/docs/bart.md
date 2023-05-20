@@ -28,7 +28,7 @@ parameter.
 $$
 \begin{align}
   \tag{1.1}
-  E [y - \tilde{y}] = \underbrace{\sum_{i=1}^I}
+  E [y - \tilde{y}] = \underbrace{\sum_{i=1}^I \text{loss} (y_i, \tilde{y}_i)}
 \end{align}
 $$
 
