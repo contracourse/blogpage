@@ -59,7 +59,7 @@ may not be apparent with simple summary statistics.
 
 $$
 \begin{align}
-c_{ij} = \sum_{m=-1,1}f(x_{i-m}, y_i) + \sum_{n=-1,1}f(x_i, y_{j-n}),\\
+O_{ij} = \sum_{i=1}^Jloss(y_i, \tilde{y}_i) + \sum_{j=1}^I\lambda(T_j),\\
 \end{align}
 $$
 
