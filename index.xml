@@ -25,10 +25,9 @@ Most of the wealth for families has stemmed from the debt-leveraged price of the
       
       <guid>https://contracourse.github.io/blogpage/docs/bart/</guid>
       <description>Introduction Gradient boosting methods are commonly used in the Machine Learning field. It&amp;rsquo;s a rather straight forward process as it utilized &amp;ldquo;tree boosting&amp;rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.
-$$E[y-\tilde{y}]=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}i)}{\text{error term}} \quad + \underbrace{\sum_{j=1}^J\lambda(T_j)}_{\text{regularization term}}$$
+$$E[y-\tilde{y}]=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}i)}{\text{error term}}\underbrace{\sum_{j=1}^J\lambda(T_j)}_{\text{regularization term}}$$
 $$E[y-\tilde{y}] = \sum_{i=1}^I \text{loss}(y_i,\tilde{y}i){\text{error term}}+\left(x^{\smash{2}}\right)$$
 $$\underbrace{\sum_{j=1}^J\lambda(T_j)}_{\text{regularization term}}$$
-This is an inline equation: $$V_{sphere} = \frac{4}{3}\pi r^3$$,
 Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.</description>
     </item>
     
