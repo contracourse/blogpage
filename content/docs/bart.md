@@ -36,6 +36,12 @@ $$
 \end{align}
 $$
 
+$$
+\begin{align}
+x_t &= f_t(x_{t-1},u_t)   &  y_t &= g_t(x_t,v_t)
+\end{align}
+$$
+
 We can use a Bayesian approach to determine the model parameters. This
 approach allows us to incorporate our prior beliefs about the shape of
 trees and the overall ensemble structure into the model. After that, the
