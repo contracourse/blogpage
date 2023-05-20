@@ -28,7 +28,7 @@ parameter.
 $$
 \begin{align}
   \tag{1.1}
-  V_{sphere} = \frac{4}{3}\pi r^3
+  E[y-\tilde{y}]=\underbrace{\sum_{i=1}^I \text{loss}(y_i,\tilde{y}_i)}_{\text{error term}}
 \end{align}
 $$
 
