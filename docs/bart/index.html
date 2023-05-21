@@ -8,8 +8,7 @@
 <title>Bayesian Additive Regression Trees in R | Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="Introduction Gradient boosting methods are commonly used in the Machine Learning field. It&rsquo;s a rather straight forward process as it utilized &ldquo;tree boosting&rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.
-$$ \begin{align} \tag{1} O_{ij} = \sum_{i=1}^I\sum_{j=1}^J \underbrace{\text{loss} (y_i, \tilde{y}_i)^2} _ { \text{error term}} \quad &#43; \underbrace{\lambda(T_j)} _ \text{regularization term} \end{align} $$
-Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.">
+O ij = &#x2211; i = 1 I loss ( y i , y &#x007E; i ) &#x23DF; error term &#43; &#x2211; j = 1 J &#x03BB; ( T j ) &#x23DF; regularization term Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.">
 <meta name="author" content="Kai Brüning">
 <link rel="canonical" href="https://contracourse.github.io/blogpage/docs/bart/">
 <link crossorigin="anonymous" href="/blogpage/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
@@ -65,8 +64,7 @@ Most common machine learning algorithms are using a similar basic objective func
     onload="renderMathInElement(document.body);"></script>
 <meta property="og:title" content="Bayesian Additive Regression Trees in R" />
 <meta property="og:description" content="Introduction Gradient boosting methods are commonly used in the Machine Learning field. It&rsquo;s a rather straight forward process as it utilized &ldquo;tree boosting&rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.
-$$ \begin{align} \tag{1} O_{ij} = \sum_{i=1}^I\sum_{j=1}^J \underbrace{\text{loss} (y_i, \tilde{y}_i)^2} _ { \text{error term}} \quad &#43; \underbrace{\lambda(T_j)} _ \text{regularization term} \end{align} $$
-Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics." />
+O ij = &#x2211; i = 1 I loss ( y i , y &#x007E; i ) &#x23DF; error term &#43; &#x2211; j = 1 J &#x03BB; ( T j ) &#x23DF; regularization term Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://contracourse.github.io/blogpage/docs/bart/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2023-04-09T18:29:50+02:00" />
@@ -75,8 +73,7 @@ Most common machine learning algorithms are using a similar basic objective func
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bayesian Additive Regression Trees in R"/>
 <meta name="twitter:description" content="Introduction Gradient boosting methods are commonly used in the Machine Learning field. It&rsquo;s a rather straight forward process as it utilized &ldquo;tree boosting&rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.
-$$ \begin{align} \tag{1} O_{ij} = \sum_{i=1}^I\sum_{j=1}^J \underbrace{\text{loss} (y_i, \tilde{y}_i)^2} _ { \text{error term}} \quad &#43; \underbrace{\lambda(T_j)} _ \text{regularization term} \end{align} $$
-Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics."/>
+O ij = &#x2211; i = 1 I loss ( y i , y &#x007E; i ) &#x23DF; error term &#43; &#x2211; j = 1 J &#x03BB; ( T j ) &#x23DF; regularization term Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics."/>
 
 
 <script type="application/ld+json">
@@ -105,12 +102,12 @@ Most common machine learning algorithms are using a similar basic objective func
   "@type": "BlogPosting",
   "headline": "Bayesian Additive Regression Trees in R",
   "name": "Bayesian Additive Regression Trees in R",
-  "description": "Introduction Gradient boosting methods are commonly used in the Machine Learning field. It\u0026rsquo;s a rather straight forward process as it utilized \u0026ldquo;tree boosting\u0026rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.\n$$ \\begin{align} \\tag{1} O_{ij} = \\sum_{i=1}^I\\sum_{j=1}^J \\underbrace{\\text{loss} (y_i, \\tilde{y}_i)^2} _ { \\text{error term}} \\quad + \\underbrace{\\lambda(T_j)} _ \\text{regularization term} \\end{align} $$\nMost common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.",
+  "description": "Introduction Gradient boosting methods are commonly used in the Machine Learning field. It\u0026rsquo;s a rather straight forward process as it utilized \u0026ldquo;tree boosting\u0026rdquo; optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.\nO ij = \u0026#x2211; i = 1 I loss ( y i , y \u0026#x007E; i ) \u0026#x23DF; error term + \u0026#x2211; j = 1 J \u0026#x03BB; ( T j ) \u0026#x23DF; regularization term Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.",
   "keywords": [
     
   ],
-  "articleBody": " Introduction Gradient boosting methods are commonly used in the Machine Learning field. It’s a rather straight forward process as it utilized “tree boosting” optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.\n$$ \\begin{align} \\tag{1} O_{ij} = \\sum_{i=1}^I\\sum_{j=1}^J \\underbrace{\\text{loss} (y_i, \\tilde{y}_i)^2} _ { \\text{error term}} \\quad + \\underbrace{\\lambda(T_j)} _ \\text{regularization term} \\end{align} $$\nMost common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics. The Bayesian approach treats the models in terms of a probability distribution, instead of giving you an exact output parameter.\nWe can use a Bayesian approach to determine the model parameters. This approach allows us to incorporate our prior beliefs about the shape of trees and the overall ensemble structure into the model. After that, the algorithm will update the priors based on the data using an MCMC back-fitting technique.\nBART utilizes similar tree boosting methods but through a Bayesian framework where predictions are drawn from a posterior distribution, which is a probability distribution of model parameters given the observed data.\nAdditive regression trees have splitting nodes that gives you smaller prediction spaces and by adding them up it gives you get a better picture of the overall prediction space. You have a bunch of weak learners to get a clear picture of the whole. You are taking each small part of the regression tree that outputs a weak learner by itself and adding them up to get a bigger picture. To address the overfitting problem, the Bayesian approach here penalize against it through regularization prior, in the same the regularization term does in the boosting algorithm. Data goes through each tree, only the residual flows to the next tree, the regularization prior balances the data in order to prevent overfitting.\nBART uses non-parametric regression models which is commonly used when relationships between variables are more complex and difficult to express. Non-parametric can also be useful for exploratory data analysis, as they can help to identify patterns and relationships that may not be apparent with simple summary statistics.\nO = ∑ i = 1 I ( y i − m J − 1 ( x i ) − T J ( x i ) ) 2 + ∑ j = 1 J Ω ( T j ) = ∑ i = 1 I { y i 2 + m J − 1 ( x i ) 2 + T J ( x i ) 2 } + ∑ j = 1 J − 1 Ω ( T j ) + Ω ( T J ) (squared terms + penalization) − 2 ∑ i = 1 I { y i m J − 1 ( x i ) + y i T J ( x i ) − m J − 1 ( x i ) T J ( x i ) ) } (cross terms) = ∑ i = 1 I { − 2 y i T J ( x i ) + 2 m J − 1 ( x i ) T J ( x i ) ) + T J ( x i ) 2 } + Ω ( T J ) + c ## Approach In this post I will use the R Package “bartMachine” demonstrate the effectiveness of BART. bartMachine provides some interesting diagnostic features which I will describe later. I will have drawn some sample data from the FRED database and I’m trying to develop a model for predicting the SPY based on some underlying economic data. Finally, I will compare the BART algorithm with the most common gradient boosting algorithm.\n\u003e str(data) Classes ‘data.table’ and 'data.frame': 264 obs. of 8 variables: $ T10Y3M : num -0.1243 0.0937 0.35 1.175 1.6882 ... $ EFFR : num 6.02 5.51 5.32 4.81 4.23 ... $ UNRATE : num 4.2 4.2 4.3 4.4 4.3 4.5 4.6 4.9 5 5.3 ... $ STLFSI4 : num 0.453 0.396 0.627 0.723 0.325 ... $ CPIAUCSL_PC1 : num 3.72 3.53 2.98 3.22 3.56 ... $ SPY : num 90.4 81.8 77 83.8 83.3 ... $ 2y_expec_Inflation: num 0.0265 0.0263 0.0236 0.0258 0.0273 ... $ 1y_real_rate : num 0.0313 0.0283 0.0362 0.024 0.0186 ... ",
-  "wordCount" : "707",
+  "articleBody": " Introduction Gradient boosting methods are commonly used in the Machine Learning field. It’s a rather straight forward process as it utilized “tree boosting” optimization methods by combining random forest algorithms with a learning rate. Gradient boosting algorithms are seeking to minimize an objective function.\nO ij = ∑ i = 1 I loss ( y i , y ~ i ) ⏟ error term + ∑ j = 1 J λ ( T j ) ⏟ regularization term Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics. The Bayesian approach treats the models in terms of a probability distribution, instead of giving you an exact output parameter.\nWe can use a Bayesian approach to determine the model parameters. This approach allows us to incorporate our prior beliefs about the shape of trees and the overall ensemble structure into the model. After that, the algorithm will update the priors based on the data using an MCMC back-fitting technique.\nBART utilizes similar tree boosting methods but through a Bayesian framework where predictions are drawn from a posterior distribution, which is a probability distribution of model parameters given the observed data.\nAdditive regression trees have splitting nodes that gives you smaller prediction spaces and by adding them up it gives you get a better picture of the overall prediction space. You have a bunch of weak learners to get a clear picture of the whole. You are taking each small part of the regression tree that outputs a weak learner by itself and adding them up to get a bigger picture. To address the overfitting problem, the Bayesian approach here penalize against it through regularization prior, in the same the regularization term does in the boosting algorithm. Data goes through each tree, only the residual flows to the next tree, the regularization prior balances the data in order to prevent overfitting.\nBART uses non-parametric regression models which is commonly used when relationships between variables are more complex and difficult to express. Non-parametric can also be useful for exploratory data analysis, as they can help to identify patterns and relationships that may not be apparent with simple summary statistics.\nApproach In this post I will use the R Package “bartMachine” demonstrate the effectiveness of BART. bartMachine provides some interesting diagnostic features which I will describe later. I will have drawn some sample data from the FRED database and I’m trying to develop a model for predicting the SPY based on some underlying economic data. Finally, I will compare the BART algorithm with the most common gradient boosting algorithm.\n\u003e str(data) Classes ‘data.table’ and 'data.frame': 264 obs. of 8 variables: $ T10Y3M : num -0.1243 0.0937 0.35 1.175 1.6882 ... $ EFFR : num 6.02 5.51 5.32 4.81 4.23 ... $ UNRATE : num 4.2 4.2 4.3 4.4 4.3 4.5 4.6 4.9 5 5.3 ... $ STLFSI4 : num 0.453 0.396 0.627 0.723 0.325 ... $ CPIAUCSL_PC1 : num 3.72 3.53 2.98 3.22 3.56 ... $ SPY : num 90.4 81.8 77 83.8 83.3 ... $ 2y_expec_Inflation: num 0.0265 0.0263 0.0236 0.0258 0.0273 ... $ 1y_real_rate : num 0.0313 0.0283 0.0362 0.024 0.0186 ... ",
+  "wordCount" : "531",
   "inLanguage": "en",
   "datePublished": "2023-04-09T18:29:50+02:00",
   "dateModified": "2023-04-09T18:29:50+02:00",
@@ -200,7 +197,7 @@ Most common machine learning algorithms are using a similar basic objective func
     <h1 class="post-title">
       Bayesian Additive Regression Trees in R
     </h1>
-    <div class="post-meta"><span title='2023-04-09 18:29:50 +0200 +0200'>April 9, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Kai Brüning
+    <div class="post-meta"><span title='2023-04-09 18:29:50 +0200 +0200'>April 9, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Kai Brüning
 
 </div>
   </header> 
@@ -211,12 +208,82 @@ field. It&rsquo;s a rather straight forward process as it utilized &ldquo;tree
 boosting&rdquo; optimization methods by combining random forest algorithms
 with a learning rate. Gradient boosting algorithms are seeking to
 minimize an objective function.</p>
-<p>$$
-\begin{align}
-\tag{1}
-O_{ij} = \sum_{i=1}^I\sum_{j=1}^J \underbrace{\text{loss} (y_i, \tilde{y}_i)^2} _ { \text{error term}} \quad   + \underbrace{\lambda(T_j)} _ \text{regularization term}
-\end{align}
-$$</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>O</mi>
+          <msub>
+            <mi></mi>
+            <mi>ij</mi>
+          </msub>
+  <mo>=</mo>
+  <munder>
+    <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+      <munder>
+        <mrow>
+          <munderover>
+            <mo>&#x2211;<!-- ∑ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>I</mi>
+          </munderover>
+          <mtext>loss</mtext>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>y</mi>
+            <mi>i</mi>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+                <mi>y</mi>
+                <mo stretchy="false">&#x007E;<!-- ~ --></mo>
+              </mover>
+            </mrow>
+            <mi>i</mi>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>&#x23DF;<!-- ⏟ --></mo>
+      </munder>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mtext>error term</mtext>
+    </mrow>
+  </munder>
+  <mspace width="1em" />
+  <mo>+</mo>
+  <munder>
+    <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+      <munder>
+        <mrow>
+          <munderover>
+            <mo>&#x2211;<!-- ∑ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>j</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>J</mi>
+          </munderover>
+          <mi mathvariant="normal">&#x03BB;<!-- λ --></mi>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>T</mi>
+            <mi>j</mi>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>&#x23DF;<!-- ⏟ --></mo>
+      </munder>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mtext>regularization term</mtext>
+    </mrow>
+  </munder>
+</math>
 <p>Most common machine learning algorithms are using a similar basic
 objective function which is based on a <em><strong>frequentist approach</strong></em>
 towards statistics. The Bayesian approach treats the models in terms of
@@ -247,373 +314,7 @@ relationships between variables are more complex and difficult to
 express. Non-parametric can also be useful for exploratory data
 analysis, as they can help to identify patterns and relationships that
 may not be apparent with simple summary statistics.</p>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
-    <mtr>
-      <mtd>
-        <mi>O</mi>
-      </mtd>
-      <mtd>
-        <mi></mi>
-        <mo>=</mo>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>i</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mi>I</mi>
-        </munderover>
-        <msup>
-          <mrow>
-            <mo>(</mo>
-            <mrow>
-              <msub>
-                <mi>y</mi>
-                <mi>i</mi>
-              </msub>
-              <mo>&#x2212;<!-- − --></mo>
-              <msub>
-                <mi>m</mi>
-                <mrow class="MJX-TeXAtom-ORD">
-                  <mi>J</mi>
-                  <mo>&#x2212;<!-- − --></mo>
-                  <mn>1</mn>
-                </mrow>
-              </msub>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mrow class="MJX-TeXAtom-ORD">
-                  <mi mathvariant="bold">x</mi>
-                </mrow>
-                <mi>i</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-              <mo>&#x2212;<!-- − --></mo>
-              <msub>
-                <mi>T</mi>
-                <mi>J</mi>
-              </msub>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mrow class="MJX-TeXAtom-ORD">
-                  <mi mathvariant="bold">x</mi>
-                </mrow>
-                <mi>i</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mrow>
-            <mo>)</mo>
-          </mrow>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>j</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mi>J</mi>
-        </munderover>
-        <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
-        <mo stretchy="false">(</mo>
-        <msub>
-          <mi>T</mi>
-          <mi>j</mi>
-        </msub>
-        <mo stretchy="false">)</mo>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd />
-      <mtd>
-        <mi></mi>
-        <mo>=</mo>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>i</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mi>I</mi>
-        </munderover>
-        <mrow>
-          <mo>{</mo>
-          <mrow>
-            <msubsup>
-              <mi>y</mi>
-              <mi>i</mi>
-              <mn>2</mn>
-            </msubsup>
-            <mo>+</mo>
-            <msub>
-              <mi>m</mi>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi>J</mi>
-                <mo>&#x2212;<!-- − --></mo>
-                <mn>1</mn>
-              </mrow>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <msup>
-              <mo stretchy="false">)</mo>
-              <mn>2</mn>
-            </msup>
-            <mo>+</mo>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <msup>
-              <mo stretchy="false">)</mo>
-              <mn>2</mn>
-            </msup>
-          </mrow>
-          <mo>}</mo>
-        </mrow>
-        <mo>+</mo>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>j</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>J</mi>
-            <mo>&#x2212;<!-- − --></mo>
-            <mn>1</mn>
-          </mrow>
-        </munderover>
-        <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
-        <mo stretchy="false">(</mo>
-        <msub>
-          <mi>T</mi>
-          <mi>j</mi>
-        </msub>
-        <mo stretchy="false">)</mo>
-        <mo>+</mo>
-        <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
-        <mo stretchy="false">(</mo>
-        <msub>
-          <mi>T</mi>
-          <mi>J</mi>
-        </msub>
-        <mo stretchy="false">)</mo>
-        <mspace width="1em" />
-        <mtext>(squared terms + penalization)</mtext>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd />
-      <mtd>
-        <mi></mi>
-        <mspace width="1em" />
-        <mo>&#x2212;<!-- − --></mo>
-        <mn>2</mn>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>i</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mi>I</mi>
-        </munderover>
-        <mrow>
-          <mo>{</mo>
-          <mrow>
-            <msub>
-              <mi>y</mi>
-              <mi>i</mi>
-            </msub>
-            <msub>
-              <mi>m</mi>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi>J</mi>
-                <mo>&#x2212;<!-- − --></mo>
-                <mn>1</mn>
-              </mrow>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <mo>+</mo>
-            <msub>
-              <mi>y</mi>
-              <mi>i</mi>
-            </msub>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <mo>&#x2212;<!-- − --></mo>
-            <msub>
-              <mi>m</mi>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi>J</mi>
-                <mo>&#x2212;<!-- − --></mo>
-                <mn>1</mn>
-              </mrow>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <mo stretchy="false">)</mo>
-          </mrow>
-          <mo>}</mo>
-        </mrow>
-        <mspace width="1em" />
-        <mtext>(cross terms)</mtext>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd />
-      <mtd>
-        <mi></mi>
-        <mo>=</mo>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>i</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mi>I</mi>
-        </munderover>
-        <mrow>
-          <mo>{</mo>
-          <mrow>
-            <mo>&#x2212;<!-- − --></mo>
-            <mn>2</mn>
-            <msub>
-              <mi>y</mi>
-              <mi>i</mi>
-            </msub>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <mo>+</mo>
-            <mn>2</mn>
-            <msub>
-              <mi>m</mi>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi>J</mi>
-                <mo>&#x2212;<!-- − --></mo>
-                <mn>1</mn>
-              </mrow>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <mo stretchy="false">)</mo>
-            <mo>+</mo>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <msup>
-              <mo stretchy="false">)</mo>
-              <mn>2</mn>
-            </msup>
-          </mrow>
-          <mo>}</mo>
-        </mrow>
-        <mo>+</mo>
-        <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
-        <mo stretchy="false">(</mo>
-        <msub>
-          <mi>T</mi>
-          <mi>J</mi>
-        </msub>
-        <mo stretchy="false">)</mo>
-        <mo>+</mo>
-        <mi>c</mi>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
-## Approach
+<h2 id="approach">Approach<a hidden class="anchor" aria-hidden="true" href="#approach">#</a></h2>
 <p>In this post I will use the R Package &ldquo;<em><strong>bartMachine&rdquo;</strong></em> demonstrate
 the effectiveness of BART. <em><strong>bartMachine</strong></em> provides some interesting
 diagnostic features which I will describe later. I will have drawn some
