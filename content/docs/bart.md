@@ -15,12 +15,82 @@ boosting" optimization methods by combining random forest algorithms
 with a learning rate. Gradient boosting algorithms are seeking to
 minimize an objective function.
 
-$$
-\begin{align}
-  \tag{1}
-O_{ij} = \sum_{i=1}^I\sum_{j=1}^J \underbrace{\text{loss} (y_i, \tilde{y}_i)^2} _ { \text{error term}} \quad   + \underbrace{\lambda(T_j)} _ \text{regularization term}
-\end{align}
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>O</mi>
+          <msub>
+            <mi></mi>
+            <mi>ij</mi>
+          </msub>
+  <mo>=</mo>
+  <munder>
+    <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+      <munder>
+        <mrow>
+          <munderover>
+            <mo>&#x2211;<!-- ∑ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>I</mi>
+          </munderover>
+          <mtext>loss</mtext>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>y</mi>
+            <mi>i</mi>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mover>
+                <mi>y</mi>
+                <mo stretchy="false">&#x007E;<!-- ~ --></mo>
+              </mover>
+            </mrow>
+            <mi>i</mi>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>&#x23DF;<!-- ⏟ --></mo>
+      </munder>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mtext>error term</mtext>
+    </mrow>
+  </munder>
+  <mspace width="1em" />
+  <mo>+</mo>
+  <munder>
+    <mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+      <munder>
+        <mrow>
+          <munderover>
+            <mo>&#x2211;<!-- ∑ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>j</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mi>J</mi>
+          </munderover>
+          <mi mathvariant="normal">&#x03BB;<!-- λ --></mi>
+          <mo stretchy="false">(</mo>
+          <msub>
+            <mi>T</mi>
+            <mi>j</mi>
+          </msub>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>&#x23DF;<!-- ⏟ --></mo>
+      </munder>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mtext>regularization term</mtext>
+    </mrow>
+  </munder>
+</math>
 
 Most common machine learning algorithms are using a similar basic
 objective function which is based on a ***frequentist approach***
@@ -57,372 +127,6 @@ express. Non-parametric can also be useful for exploratory data
 analysis, as they can help to identify patterns and relationships that
 may not be apparent with simple summary statistics.
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
-    <mtr>
-      <mtd>
-        <mi>O</mi>
-      </mtd>
-      <mtd>
-        <mi></mi>
-        <mo>=</mo>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>i</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mi>I</mi>
-        </munderover>
-        <msup>
-          <mrow>
-            <mo>(</mo>
-            <mrow>
-              <msub>
-                <mi>y</mi>
-                <mi>i</mi>
-              </msub>
-              <mo>&#x2212;<!-- − --></mo>
-              <msub>
-                <mi>m</mi>
-                <mrow class="MJX-TeXAtom-ORD">
-                  <mi>J</mi>
-                  <mo>&#x2212;<!-- − --></mo>
-                  <mn>1</mn>
-                </mrow>
-              </msub>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mrow class="MJX-TeXAtom-ORD">
-                  <mi mathvariant="bold">x</mi>
-                </mrow>
-                <mi>i</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-              <mo>&#x2212;<!-- − --></mo>
-              <msub>
-                <mi>T</mi>
-                <mi>J</mi>
-              </msub>
-              <mo stretchy="false">(</mo>
-              <msub>
-                <mrow class="MJX-TeXAtom-ORD">
-                  <mi mathvariant="bold">x</mi>
-                </mrow>
-                <mi>i</mi>
-              </msub>
-              <mo stretchy="false">)</mo>
-            </mrow>
-            <mo>)</mo>
-          </mrow>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>j</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mi>J</mi>
-        </munderover>
-        <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
-        <mo stretchy="false">(</mo>
-        <msub>
-          <mi>T</mi>
-          <mi>j</mi>
-        </msub>
-        <mo stretchy="false">)</mo>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd />
-      <mtd>
-        <mi></mi>
-        <mo>=</mo>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>i</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mi>I</mi>
-        </munderover>
-        <mrow>
-          <mo>{</mo>
-          <mrow>
-            <msubsup>
-              <mi>y</mi>
-              <mi>i</mi>
-              <mn>2</mn>
-            </msubsup>
-            <mo>+</mo>
-            <msub>
-              <mi>m</mi>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi>J</mi>
-                <mo>&#x2212;<!-- − --></mo>
-                <mn>1</mn>
-              </mrow>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <msup>
-              <mo stretchy="false">)</mo>
-              <mn>2</mn>
-            </msup>
-            <mo>+</mo>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <msup>
-              <mo stretchy="false">)</mo>
-              <mn>2</mn>
-            </msup>
-          </mrow>
-          <mo>}</mo>
-        </mrow>
-        <mo>+</mo>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>j</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>J</mi>
-            <mo>&#x2212;<!-- − --></mo>
-            <mn>1</mn>
-          </mrow>
-        </munderover>
-        <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
-        <mo stretchy="false">(</mo>
-        <msub>
-          <mi>T</mi>
-          <mi>j</mi>
-        </msub>
-        <mo stretchy="false">)</mo>
-        <mo>+</mo>
-        <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
-        <mo stretchy="false">(</mo>
-        <msub>
-          <mi>T</mi>
-          <mi>J</mi>
-        </msub>
-        <mo stretchy="false">)</mo>
-        <mspace width="1em" />
-        <mtext>(squared terms + penalization)</mtext>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd />
-      <mtd>
-        <mi></mi>
-        <mspace width="1em" />
-        <mo>&#x2212;<!-- − --></mo>
-        <mn>2</mn>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>i</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mi>I</mi>
-        </munderover>
-        <mrow>
-          <mo>{</mo>
-          <mrow>
-            <msub>
-              <mi>y</mi>
-              <mi>i</mi>
-            </msub>
-            <msub>
-              <mi>m</mi>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi>J</mi>
-                <mo>&#x2212;<!-- − --></mo>
-                <mn>1</mn>
-              </mrow>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <mo>+</mo>
-            <msub>
-              <mi>y</mi>
-              <mi>i</mi>
-            </msub>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <mo>&#x2212;<!-- − --></mo>
-            <msub>
-              <mi>m</mi>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi>J</mi>
-                <mo>&#x2212;<!-- − --></mo>
-                <mn>1</mn>
-              </mrow>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <mo stretchy="false">)</mo>
-          </mrow>
-          <mo>}</mo>
-        </mrow>
-        <mspace width="1em" />
-        <mtext>(cross terms)</mtext>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd />
-      <mtd>
-        <mi></mi>
-        <mo>=</mo>
-        <munderover>
-          <mo>&#x2211;<!-- ∑ --></mo>
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>i</mi>
-            <mo>=</mo>
-            <mn>1</mn>
-          </mrow>
-          <mi>I</mi>
-        </munderover>
-        <mrow>
-          <mo>{</mo>
-          <mrow>
-            <mo>&#x2212;<!-- − --></mo>
-            <mn>2</mn>
-            <msub>
-              <mi>y</mi>
-              <mi>i</mi>
-            </msub>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <mo>+</mo>
-            <mn>2</mn>
-            <msub>
-              <mi>m</mi>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi>J</mi>
-                <mo>&#x2212;<!-- − --></mo>
-                <mn>1</mn>
-              </mrow>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <mo stretchy="false">)</mo>
-            <mo stretchy="false">)</mo>
-            <mo>+</mo>
-            <msub>
-              <mi>T</mi>
-              <mi>J</mi>
-            </msub>
-            <mo stretchy="false">(</mo>
-            <msub>
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi mathvariant="bold">x</mi>
-              </mrow>
-              <mi>i</mi>
-            </msub>
-            <msup>
-              <mo stretchy="false">)</mo>
-              <mn>2</mn>
-            </msup>
-          </mrow>
-          <mo>}</mo>
-        </mrow>
-        <mo>+</mo>
-        <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
-        <mo stretchy="false">(</mo>
-        <msub>
-          <mi>T</mi>
-          <mi>J</mi>
-        </msub>
-        <mo stretchy="false">)</mo>
-        <mo>+</mo>
-        <mi>c</mi>
-      </mtd>
-    </mtr>
-  </mtable>
-</math>
 ## Approach
 
 In this post I will use the R Package "***bartMachine"*** demonstrate
