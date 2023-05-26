@@ -129,13 +129,14 @@ may not be apparent with simple summary statistics.
 
 ## Approach
 
-In this post I will use the R Package "***bartMachine"*** demonstrate
-the effectiveness of BART. ***bartMachine*** provides some interesting
-diagnostic features which I will describe later. I will have drawn some
-sample data from the FRED database and I'm trying to develop a model for
-predicting the SPY based on some underlying economic data. Finally, I
-will compare the BART algorithm with the most common gradient boosting
-algorithm.
+In this post I will use the R Package “bartMachine” demonstrate the
+effectiveness of BART. bartMachine provides some interesting diagnostic features
+which I will describe later. I have gathered monthly economic data from FRED in
+order to forecast the SPY. I’m trying to develop a model for predicting the SPY
+based on some underlying economic data. Finally, I will compare the BART
+algorithm with the most common gradient boosting algorithm. My dataset can be
+seen as below starting from 2001 till end of 2022; the SPY is the predictive
+variable \\(\hat{y}\\) with the remaining independent variables \\(x\\).
 
 ```{r snippetName, echo=F}
 > str(data)
@@ -150,6 +151,43 @@ Classes ‘data.table’ and 'data.frame':  264 obs. of  8 variables:
  $ 1y_real_rate      : num  0.0313 0.0283 0.0362 0.024 0.0186 ...
 ```
 
+I split the data into training and testing using the R package “caret”,
+20% of the data will go into the test set, while the remaining 80% will go into
+the training set.
 
+```{r snippetName, echo=F}
+library(caret)
+y <- data$SPY
+df <- within(data, rm(SPY))
+set.seed(42) 
+test_inds = createDataPartition(y = 1:length(y), p = 0.2, list = F)
+
+df_test = df[test_inds, ]
+y_test = y[test_inds]
+df_train = df[-test_inds, ]
+y_train = y[-test_inds]
+```
+By running the bartMachine on the training sample I got the following output
+<br>
+``bart_machine = bartMachine(df_train, y_train)``
+</br>
+```
+> summary(bart_machine)
+bartMachine v1.3.3.1 for regression
+
+training data size: n = 208 and p = 7 
+built in 1 secs on 1 core, 50 trees, 250 burn-in and 1000 post. samples
+
+sigsq est for y beforehand: 2046.61 
+avg sigsq estimate after burn-in: 55.21694 
+
+in-sample statistics:
+ L1 = 586.34 
+ L2 = 2765.21 
+ rmse = 3.65 
+ Pseudo-Rsq = 0.9987
+p-val for shapiro-wilk test of normality of residuals: 0.28717 
+p-val for zero-mean noise: 0.94583 
+```
 
 </span>
