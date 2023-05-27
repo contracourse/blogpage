@@ -167,10 +167,9 @@ y_test = y[test_inds]
 df_train = df[-test_inds, ]
 y_train = y[-test_inds]
 ```
-Now running bartMachine on the training data ``bart_machine = bartMachine(df_train, y_train)``. The default settings uses a burn-in rate of 250 and 1000 iteration with 50 trees. All of those parameters can be specified manually <br>
+Now running bartMachine on the training data ``bart_machine = bartMachine(df_train, y_train)``. The default settings uses a burn-in rate of 250 and 1000 iteration with 50 trees. All of those parameters can be specified manually. <br>
 BART uses L1 & L2 regularization to reduce overfitting, introduce penalties and
 reduce complexity especially with high dimensional data.
-
 The Pseudo-Rsq is for non-linear models, it has the same interpretability as a
 normal R-squared. 
 
@@ -178,6 +177,8 @@ The p-value of the shapiro-wilk test tells us about
 the data distribution. If the p-value is less than or equal to the significance
 level (usually 0.05), then we reject the null hypothesis and conclude that the
 data is not normally distributed.
+
+![img1](/blogpage/static/images/8750.png)
 
 ```
 > summary(bart_machine)
@@ -197,5 +198,14 @@ in-sample statistics:
 p-val for shapiro-wilk test of normality of residuals: 0.28717 
 p-val for zero-mean noise: 0.94583 
 ```
+
+We can use the “rmse_by_num_trees” function to find the optimum number of trees
+for the model. I’ve given it a sequence from 15 to 75 trees by 5 increments with
+3 number of replicant trees. <br>``
+rmse_by_num_trees(bart_machine, 
+                  tree_list=c(seq(15, 75, by=5)),
+                  num_replicates=3) `` 
+
+
 
 </span>
