@@ -179,7 +179,7 @@ level (usually 0.05), then we reject the null hypothesis and conclude that the
 data is not normally distributed.
 
 ok
-![img1](/content/docs/8750.png)
+![img1](/docs/8750.png)
 ok
 
 ```
