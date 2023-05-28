@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="httpgd" width="911.00" height="623.00" viewBox="0 0 728.80 498.40">
+<defs>
+  <style type='text/css'><![CDATA[
+    .httpgd line, .httpgd polyline, .httpgd polygon, .httpgd path, .httpgd rect, .httpgd circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+<clipPath id="c0"><rect x="0.00" y="0.00" width="728.80" height="498.40"/></clipPath>
+<clipPath id="c1"><rect x="59.04" y="59.04" width="639.52" height="365.92"/></clipPath>
+<clipPath id="c2"><rect x="0.00" y="0.00" width="728.80" height="498.40"/></clipPath>
+<clipPath id="c3"><rect x="59.04" y="59.04" width="639.52" height="365.92"/></clipPath>
+</defs>
+<rect width="100%" height="100%" style="stroke: none;fill: #FFFFFF;"/>
+<g clip-path="url(#c0)">
+</g><g clip-path="url(#c2)">
+<g><text x="378.80" y="26.13" text-anchor="middle" style="font-family: Arimo;font-size: 14.40px;font-weight: bold;" textLength="468.55px" lengthAdjust="spacingAndGlyphs">bartMachine test for importance of covariate(s): UNRATE </text></g>
+<g><text x="378.80" y="43.41" text-anchor="middle" style="font-family: Arimo;font-size: 14.40px;font-weight: bold;" textLength="248.16px" lengthAdjust="spacingAndGlyphs"> Null Samples of Pseudo-R^2&apos;s</text></g>
+<g><text x="378.80" y="465.28" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="127.81px" lengthAdjust="spacingAndGlyphs">permutation samples</text></g>
+<g><text x="378.80" y="479.68" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="58.38px" lengthAdjust="spacingAndGlyphs"> pval =  0</text></g>
+<g><text transform="translate(12.96,242.00) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="62.02px" lengthAdjust="spacingAndGlyphs">Frequency</text></g>
+<line x1="128.70" y1="424.96" x2="573.51" y2="424.96" style="stroke-width: 0.75;"/>
+<line x1="128.70" y1="424.96" x2="128.70" y2="432.16" style="stroke-width: 0.75;"/>
+<line x1="276.97" y1="424.96" x2="276.97" y2="432.16" style="stroke-width: 0.75;"/>
+<line x1="425.24" y1="424.96" x2="425.24" y2="432.16" style="stroke-width: 0.75;"/>
+<line x1="573.51" y1="424.96" x2="573.51" y2="432.16" style="stroke-width: 0.75;"/>
+<g><text x="128.70" y="450.88" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="34.37px" lengthAdjust="spacingAndGlyphs">0.990</text></g>
+<g><text x="276.97" y="450.88" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="34.37px" lengthAdjust="spacingAndGlyphs">0.995</text></g>
+<g><text x="425.24" y="450.88" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="34.37px" lengthAdjust="spacingAndGlyphs">1.000</text></g>
+<g><text x="573.51" y="450.88" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="34.37px" lengthAdjust="spacingAndGlyphs">1.005</text></g>
+<line x1="59.04" y1="411.41" x2="59.04" y2="72.59" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="411.41" x2="51.84" y2="411.41" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="343.64" x2="51.84" y2="343.64" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="275.88" x2="51.84" y2="275.88" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="208.12" x2="51.84" y2="208.12" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="140.36" x2="51.84" y2="140.36" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="72.59" x2="51.84" y2="72.59" style="stroke-width: 0.75;"/>
+<g><text transform="translate(41.76,411.41) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="7.64px" lengthAdjust="spacingAndGlyphs">0</text></g>
+<g><text transform="translate(41.76,343.64) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="7.64px" lengthAdjust="spacingAndGlyphs">5</text></g>
+<g><text transform="translate(41.76,275.88) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">10</text></g>
+<g><text transform="translate(41.76,208.12) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">15</text></g>
+<g><text transform="translate(41.76,140.36) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">20</text></g>
+<g><text transform="translate(41.76,72.59) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">25</text></g>
+</g><g clip-path="url(#c3)">
+<rect x="69.39" y="397.85" width="29.65" height="13.55" style="stroke-width: 0.75;fill: #D3D3D3;"/>
+<rect x="99.05" y="384.30" width="29.65" height="27.11" style="stroke-width: 0.75;fill: #D3D3D3;"/>
+<rect x="128.70" y="384.30" width="29.65" height="27.11" style="stroke-width: 0.75;fill: #D3D3D3;"/>
+<rect x="158.36" y="289.43" width="29.65" height="121.97" style="stroke-width: 0.75;fill: #D3D3D3;"/>
+<rect x="188.01" y="153.91" width="29.65" height="257.50" style="stroke-width: 0.75;fill: #D3D3D3;"/>
+<rect x="217.66" y="72.59" width="29.65" height="338.81" style="stroke-width: 0.75;fill: #D3D3D3;"/>
+<rect x="247.32" y="140.36" width="29.65" height="271.05" style="stroke-width: 0.75;fill: #D3D3D3;"/>
+<rect x="276.97" y="167.46" width="29.65" height="243.95" style="stroke-width: 0.75;fill: #D3D3D3;"/>
+<rect x="306.63" y="357.20" width="29.65" height="54.21" style="stroke-width: 0.75;fill: #D3D3D3;"/>
+<line x1="378.80" y1="424.96" x2="378.80" y2="59.04" style="stroke-width: 2.25;stroke: #0000FF;"/>
+</g>
+</svg>

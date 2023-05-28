@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="httpgd" width="911.00" height="623.00" viewBox="0 0 728.80 498.40">
+<defs>
+  <style type='text/css'><![CDATA[
+    .httpgd line, .httpgd polyline, .httpgd polygon, .httpgd path, .httpgd rect, .httpgd circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+<clipPath id="c0"><rect x="0.00" y="0.00" width="728.80" height="498.40"/></clipPath>
+<clipPath id="c1"><rect x="86.40" y="43.20" width="642.40" height="311.20"/></clipPath>
+</defs>
+<rect width="100%" height="100%" style="stroke: none;fill: #FFFFFF;"/>
+<g clip-path="url(#c0)">
+<rect x="110.19" y="63.39" width="72.54" height="291.01" style="stroke-width: 0.75;fill: #BEBEBE;"/>
+<rect x="197.24" y="113.89" width="72.54" height="240.51" style="stroke-width: 0.75;fill: #BEBEBE;"/>
+<rect x="284.28" y="163.10" width="72.54" height="191.30" style="stroke-width: 0.75;fill: #BEBEBE;"/>
+<rect x="371.33" y="218.25" width="72.54" height="136.15" style="stroke-width: 0.75;fill: #BEBEBE;"/>
+<rect x="458.38" y="243.33" width="72.54" height="111.07" style="stroke-width: 0.75;fill: #BEBEBE;"/>
+<rect x="545.42" y="256.75" width="72.54" height="97.65" style="stroke-width: 0.75;fill: #BEBEBE;"/>
+<rect x="632.47" y="257.68" width="72.54" height="96.72" style="stroke-width: 0.75;fill: #BEBEBE;"/>
+<g><text transform="translate(150.84,368.80) rotate(-90.00)" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="47.80px" lengthAdjust="spacingAndGlyphs">UNRATE</text></g>
+<g><text transform="translate(237.88,368.80) rotate(-90.00)" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="29.73px" lengthAdjust="spacingAndGlyphs">EFFR</text></g>
+<g><text transform="translate(324.93,368.80) rotate(-90.00)" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="47.93px" lengthAdjust="spacingAndGlyphs">T10Y3M</text></g>
+<g><text transform="translate(411.97,368.80) rotate(-90.00)" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="88.10px" lengthAdjust="spacingAndGlyphs">CPIAUCSL_PC1</text></g>
+<g><text transform="translate(499.02,368.80) rotate(-90.00)" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="47.13px" lengthAdjust="spacingAndGlyphs">STLFSI4</text></g>
+<g><text transform="translate(586.07,368.80) rotate(-90.00)" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="73.89px" lengthAdjust="spacingAndGlyphs">1y_real_rate</text></g>
+<g><text transform="translate(673.11,368.80) rotate(-90.00)" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="111.72px" lengthAdjust="spacingAndGlyphs">2y_expec_Inflation</text></g>
+<g><text transform="translate(40.32,198.80) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="118.99px" lengthAdjust="spacingAndGlyphs">Inclusion Proportion</text></g>
+<line x1="86.40" y1="354.40" x2="86.40" y2="63.30" style="stroke-width: 0.75;"/>
+<line x1="86.40" y1="354.40" x2="79.20" y2="354.40" style="stroke-width: 0.75;"/>
+<line x1="86.40" y1="296.18" x2="79.20" y2="296.18" style="stroke-width: 0.75;"/>
+<line x1="86.40" y1="237.96" x2="79.20" y2="237.96" style="stroke-width: 0.75;"/>
+<line x1="86.40" y1="179.74" x2="79.20" y2="179.74" style="stroke-width: 0.75;"/>
+<line x1="86.40" y1="121.52" x2="79.20" y2="121.52" style="stroke-width: 0.75;"/>
+<line x1="86.40" y1="63.30" x2="79.20" y2="63.30" style="stroke-width: 0.75;"/>
+<g><text x="72.00" y="358.77" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="26.73px" lengthAdjust="spacingAndGlyphs">0.00</text></g>
+<g><text x="72.00" y="300.55" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="26.73px" lengthAdjust="spacingAndGlyphs">0.05</text></g>
+<g><text x="72.00" y="242.33" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="26.73px" lengthAdjust="spacingAndGlyphs">0.10</text></g>
+<g><text x="72.00" y="184.11" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="26.73px" lengthAdjust="spacingAndGlyphs">0.15</text></g>
+<g><text x="72.00" y="125.89" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="26.73px" lengthAdjust="spacingAndGlyphs">0.20</text></g>
+<g><text x="72.00" y="67.67" text-anchor="end" style="font-family: Arimo;font-size: 12.00px;" textLength="26.73px" lengthAdjust="spacingAndGlyphs">0.25</text></g>
+</g><g clip-path="url(#c1)">
+<line x1="146.46" y1="63.39" x2="146.46" y2="43.20" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="233.51" y1="113.89" x2="233.51" y2="97.34" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="320.55" y1="163.10" x2="320.55" y2="144.44" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="407.60" y1="218.25" x2="407.60" y2="209.98" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="494.65" y1="243.33" x2="494.65" y2="230.22" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="581.69" y1="256.75" x2="581.69" y2="243.97" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="668.74" y1="257.68" x2="668.74" y2="246.49" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="146.46" y1="63.39" x2="146.46" y2="83.58" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="233.51" y1="113.89" x2="233.51" y2="130.44" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="320.55" y1="163.10" x2="320.55" y2="181.76" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="407.60" y1="218.25" x2="407.60" y2="226.53" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="494.65" y1="243.33" x2="494.65" y2="256.44" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="581.69" y1="256.75" x2="581.69" y2="269.53" style="stroke-width: 2.25;stroke: #966363;"/>
+<line x1="668.74" y1="257.68" x2="668.74" y2="268.86" style="stroke-width: 2.25;stroke: #966363;"/>
+</g>
+</svg>
