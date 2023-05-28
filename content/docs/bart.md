@@ -178,8 +178,9 @@ the data distribution. If the p-value is less than or equal to the significance
 level (usually 0.05), then we reject the null hypothesis and conclude that the
 data is not normally distributed.
 
-![img1](/static/images/8750.png)
-
+ok
+![img1](/content/docs/8750.png)
+ok
 
 ```
 > summary(bart_machine)
