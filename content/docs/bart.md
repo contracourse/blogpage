@@ -167,47 +167,79 @@ y_test = y[test_inds]
 df_train = df[-test_inds, ]
 y_train = y[-test_inds]
 ```
-Now running bartMachine on the training data ``bart_machine = bartMachine(df_train, y_train)``. The default settings uses a burn-in rate of 250 and 1000 iteration with 50 trees. All of those parameters can be specified manually. <br>
+Now running bartMachine on the training data ``bart_machine =
+bartMachine(df_train, y_train)``. The default settings uses a burn-in rate of
+250 and 1000 iteration with 50 trees. All of those parameters can be specified
+manually. <br>
 BART uses L1 & L2 regularization to reduce overfitting, introduce penalties and
-reduce complexity especially with high dimensional data.
-The Pseudo-Rsq is for non-linear models, it has the same interpretability as a
-normal R-squared. 
+reduce complexity especially with high dimensional data. The Pseudo-Rsq is for
+non-linear models, it has the same interpretability as a normal R-squared. 
 
 The p-value of the shapiro-wilk test tells us about
 the data distribution. If the p-value is less than or equal to the significance
 level (usually 0.05), then we reject the null hypothesis and conclude that the
 data is not normally distributed.
 
-ok
-![img1](content/docs/8750.png)
-ok
-
 ```
 > summary(bart_machine)
 bartMachine v1.3.3.1 for regression
 
 training data size: n = 208 and p = 7 
-built in 1 secs on 1 core, 50 trees, 250 burn-in and 1000 post. samples
+built in 1.1 secs on 1 core, 50 trees, 250 burn-in and 1000 post. samples
 
 sigsq est for y beforehand: 2046.61 
-avg sigsq estimate after burn-in: 55.21694 
+avg sigsq estimate after burn-in: 59.4813 
 
 in-sample statistics:
- L1 = 586.34 
- L2 = 2765.21 
- rmse = 3.65 
- Pseudo-Rsq = 0.9987
-p-val for shapiro-wilk test of normality of residuals: 0.28717 
-p-val for zero-mean noise: 0.94583 
+ L1 = 693.26 
+ L2 = 3554.45 
+ rmse = 4.13 
+ Pseudo-Rsq = 0.9984
+p-val for shapiro-wilk test of normality of residuals: 0.43186 
+p-val for zero-mean noise: 0.98576 
+
 ```
 
-We can use the “rmse_by_num_trees” function to find the optimum number of trees
-for the model. I’ve given it a sequence from 15 to 75 trees by 5 increments with
-3 number of replicant trees. <br>``
+The default settings use a burn-in rate of 250 and 1000 iteration with 50 trees.
+All of those parameters can be specified manually. We can use the
+“rmse_by_num_trees” function to find the optimum number of trees for the model.
+I’ve given it a sequence from 15 to 75 trees by 5 increments with 3 number of
+replicant trees 
+ <br>``
 rmse_by_num_trees(bart_machine, 
                   tree_list=c(seq(15, 75, by=5)),
                   num_replicates=3) `` 
 
+![Example image](/static/image.png)
 
+
+
+
+
+
+<!-- ```
+rmse <- function(x, y) sqrt(mean((x - y)^2))
+rsq <- function(x, y) summary(lm(y~x))$r.squared
+y_pred <- predict(bart_machine, df_test)
+paste('r2:', rsq(y_test, y_pred)) # the R-squared y-test fit with predicted 
+paste('rmse:', rmse(y_test, y_pred))
+cor.test(y_test, y_pred, method=c("pearson"))
+``` -->
+Output
+```
+[1] "r2: 0.941888451503377"
+[1] "rmse: 27.3396195319191"
+
+        Pearson's product-moment correlation
+
+data:  y_test and y_pred
+t = 29.585, df = 54, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.9499985 0.9826813
+sample estimates:
+      cor 
+0.9705094 
+```
 
 </span>
