@@ -210,25 +210,39 @@ rmse_by_num_trees(bart_machine,
                   tree_list=c(seq(15, 75, by=5)),
                   num_replicates=3) `` 
 
-![RMSE Tree-Plot](https://github.com/contracourse/blogpage/blob/main/static/images/rmse_by_num_trees.png?raw=true)
+![RMSE
+Tree-Plot](https://github.com/contracourse/blogpage/blob/main/static/images/rmse_by_num_trees.png?raw=true)
 
-As you can see it shows us the path of the trees with its respective rmse. I choose the trees with the minimum number of rmse and then run the “bartmachine” again.
+As you can see it shows us the path of the trees with its respective rmse. I
+choose the trees with the minimum number of rmse and then run the “bartmachine”
+again.
 
-Using the “plot_convergence_diagnostics” function we can see how the MCMC performs. Overall, the tree nodes perform relatively constant. On the top left, the Siqsq estimate converges after 250 interactions inside the interval, we can also use 300 iterations but I’m going to leave it as default now. 
+Using the “plot_convergence_diagnostics” function we can see how the MCMC
+performs. Overall, the tree nodes perform relatively constant. On the top left,
+the Siqsq estimate converges after 250 interactions inside the interval, we can
+also use 300 iterations but I’m going to leave it as default now. 
 
 ![Plot-Diagnostics](https://github.com/contracourse/blogpage/blob/main/static/images/plot_convergence_diagnostics.png?raw=true)
 
-Next up, the “check_bart_error_assumptions” show us the error normality distribution using QQ-plots. We can see the residuals are normally distributed, no need of any adjustment. 
+Next up, the “check_bart_error_assumptions” show us the error normality
+distribution using QQ-plots. We can see the residuals are normally distributed,
+no need of any adjustment. 
 
-![Check_bart_error](https://github.com/contracourse/blogpage/blob/main/static/images/check_bart_error_assumptions.png?raw=true)
+{{< figure src="https://raw.githubusercontent.com/contracourse/blogpage/7ca4d56a664eedbfa5ab19ee4366e87699a8b541/static/images/check_bart_error_assumptions.svg" >}}
 
-The next plots show how well our model performs. We can provide a predictive range of 95% for each data point with an accuracy rate of approximately 90%. Additionally, we have the capability to calculate the RMSE and other metrics on the test set. It should be noted that the prediction intervals have a larger interval as compared to credible intervals since they take into account the uncertainty arising from the error term.
-The prediction interval tells us about the precision of our individual predictions, a credible interval gives us information about the likely range of true parameter values.
+The next plots show how well our model performs. We can provide a predictive
+range of 95% for each data point with an accuracy rate of approximately 90%.
+Additionally, we have the capability to calculate the RMSE and other metrics on
+the test set. It should be noted that the prediction intervals have a larger
+interval as compared to credible intervals since they take into account the
+uncertainty arising from the error term. The prediction interval tells us about
+the precision of our individual predictions, a credible interval gives us
+information about the likely range of true parameter values.
 
-![plot_y_vs_yhat](https://github.com/contracourse/blogpage/blob/main/static/images/plot_y_vs_yhat_2.png?raw=true)
+{{< figure src="https://raw.githubusercontent.com/contracourse/blogpage/420c743729512917c969175cf05accd97ad01235/static/images/plot_y_vs_yhat_2.svg" >}}
 
-Lastly, we can look at the most important variables in our model. The unemployment rate seems to be the most important followed with 
-
+Lastly, we can look at the most important variables in our model. The
+unemployment rate seems to be the most important followed with 
 
 
 <!-- ```
