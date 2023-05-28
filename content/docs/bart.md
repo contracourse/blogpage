@@ -210,8 +210,7 @@ rmse_by_num_trees(bart_machine,
                   tree_list=c(seq(15, 75, by=5)),
                   num_replicates=3) `` 
 
-![Example image](/static/image.png)
-
+![Example image](https://github.com/contracourse/blogpage/blob/main/static/images/check_bart_error_assumptions.png?raw=true)
 
 
 
