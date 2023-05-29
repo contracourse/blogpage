@@ -132,7 +132,7 @@ may not be apparent with simple summary statistics.
 
 ## Approach
 
-In this post I will use the R Package “bartMachine” demonstrate the
+In this post I will use the R Package “bartMachine” to demonstrate the
 effectiveness of BART. bartMachine provides some interesting diagnostic features
 which I will describe later. I have gathered monthly economic data from FRED in
 order to forecast the SPY. I’m trying to develop a model for predicting the SPY
@@ -295,5 +295,15 @@ sample estimates:
      cor 
 0.968974
 ``` -->
+
+<h1 id='references'>References</h1>
+
+Coqueret, Guillaume, and Tony Guida. 2022. “Machine Learning for Factor Investing.” (http://www.mlfactor.com/bayes.html).
+
+Kapelner, Adam, and Justin Bleich. 2016. “BartMachine : Machine Learning with Bayesian Additive Regression Trees.” Journal of Statistical Software 70(4). doi: 10.18637/jss.v070.i04.
+
+Koehrsen, Will. 2018. “Introduction to Bayesian Linear Regression.” (https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7).
+
+Mamun, Osman. 2021. “A Primer to Bayesian Additive Regression Tree with R.” (https://towardsdatascience.com/a-primer-to-bayesian-additive-regression-tree-with-r-b9d0dbf704d).
 
 </span>
