@@ -188,19 +188,18 @@ data is not normally distributed.
 bartMachine v1.3.3.1 for regression
 
 training data size: n = 208 and p = 7 
-built in 1.1 secs on 1 core, 50 trees, 250 burn-in and 1000 post. samples
+built in 0.9 secs on 3 cores, 50 trees, 250 burn-in and 1000 post. samples
 
 sigsq est for y beforehand: 2046.61 
-avg sigsq estimate after burn-in: 59.4813 
+avg sigsq estimate after burn-in: 78.62889 
 
 in-sample statistics:
- L1 = 693.26 
- L2 = 3554.45 
- rmse = 4.13 
+ L1 = 666.8 
+ L2 = 3483.97 
+ rmse = 4.09 
  Pseudo-Rsq = 0.9984
-p-val for shapiro-wilk test of normality of residuals: 0.43186 
-p-val for zero-mean noise: 0.98576 
-
+p-val for shapiro-wilk test of normality of residuals: 0.77388 
+p-val for zero-mean noise: 0.97604
 ```
 
 The default settings use a burn-in rate of 250 and 1000 iteration with 50 trees.
@@ -214,18 +213,18 @@ rmse_by_num_trees(bart_machine,
                   num_replicates=3) `` 
 
 ![RMSE
-Tree-Plot](https://github.com/contracourse/blogpage/blob/main/static/images/rmse_by_num_trees.png?raw=true)
+Tree-Plot](https://raw.githubusercontent.com/contracourse/blogpage/3fa4f00bccebc3d6a3ae39b57fb4db12bdbb24c9/static/images/rmse_by_num_trees.svg)
 
 As you can see it shows us the path of the trees with its respective RMSE. Then
 we can use the trees with the minimum RMSE and run the `bartmachine` again.
-``bart_machine <- bartMachine(df_train, y_train, num_trees=35, seed=42)``
+``bart_machine <- bartMachine(df_train, y_train, num_trees=35)``
 
 Using the “plot_convergence_diagnostics” function we can see how the MCMC
 performs. Overall, the tree nodes perform relatively constant. On the top left,
 the Siqsq estimate converges after 250 interactions inside the interval, we can
 also use 300 iterations but I’m going to leave it as default now. 
 
-![Plot-Diagnostics](https://github.com/contracourse/blogpage/blob/main/static/images/plot_convergence_diagnostics.png?raw=true)
+![Plot-Diagnostics](https://raw.githubusercontent.com/contracourse/blogpage/3fa4f00bccebc3d6a3ae39b57fb4db12bdbb24c9/static/images/plot_convergence_diagnostics.svg)
 
 Next up, the “check_bart_error_assumptions” show us the error normality
 distribution using QQ-plots. We can see the residuals are normally distributed,
@@ -258,19 +257,19 @@ cor.test(y_test, y_pred, method=c("pearson"))
 ``` -->
 Output
 ```
-[1] "r2: 0.941888451503377"
-[1] "rmse: 27.3396195319191"
+[1] "r2: 0.938910704998679"
+[1] "rmse: 27.8567148747163"
 
         Pearson's product-moment correlation
 
 data:  y_test and y_pred
-t = 29.585, df = 54, p-value < 2.2e-16
+t = 28.809, df = 54, p-value < 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.9499985 0.9826813
+ 0.9474239 0.9817738
 sample estimates:
-      cor 
-0.9705094 
+     cor 
+0.968974
 ```
 
 </span>
