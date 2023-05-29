@@ -136,8 +136,7 @@ In this post I will use the R Package “bartMachine” demonstrate the
 effectiveness of BART. bartMachine provides some interesting diagnostic features
 which I will describe later. I have gathered monthly economic data from FRED in
 order to forecast the SPY. I’m trying to develop a model for predicting the SPY
-based on some underlying economic data. Finally, I will compare the BART
-algorithm with the most common gradient boosting algorithm. My dataset can be
+based on some underlying economic data. My dataset can be
 seen as below starting from 2001 till end of 2022; the SPY is the predictive
 variable \\(\hat{y}\\) with the remaining independent variables \\(x\\).
 
@@ -206,23 +205,27 @@ The default settings use a burn-in rate of 250 and 1000 iteration with 50 trees.
 All of those parameters can be specified manually. We can use the
 “rmse_by_num_trees” function to find the optimum number of trees for the model.
 I’ve given it a sequence from 15 to 75 trees by 5 increments with 3 number of
-replicant trees 
+replicant trees.
  <br>``
 rmse_by_num_trees(bart_machine, 
                   tree_list=c(seq(15, 75, by=5)),
-                  num_replicates=3) `` 
+                  num_replicates=3) `` <br>
+The RMSE tree chart is used in order to illustrate the predictive capacity of
+our model. With additional hyperparameter optimization we can build a better
+bartmachine model in the future.
 
 ![RMSE
 Tree-Plot](https://raw.githubusercontent.com/contracourse/blogpage/3fa4f00bccebc3d6a3ae39b57fb4db12bdbb24c9/static/images/rmse_by_num_trees.svg)
 
 As you can see it shows us the path of the trees with its respective RMSE. Then
-we can use the trees with the minimum RMSE and run the `bartmachine` again.
+we can use the trees with the minimum RMSE and run the `bartmachine` again. <br>
 ``bart_machine <- bartMachine(df_train, y_train, num_trees=35)``
 
 Using the “plot_convergence_diagnostics” function we can see how the MCMC
 performs. Overall, the tree nodes perform relatively constant. On the top left,
-the Siqsq estimate converges after 250 interactions inside the interval, we can
-also use 300 iterations but I’m going to leave it as default now. 
+the Siqsq estimate converges after ~200 interactions inside the interval.
+The three subsequent plots separated by gray lines are the post-burn-in
+iterations from each of the three computing cores employed during model.
 
 ![Plot-Diagnostics](https://raw.githubusercontent.com/contracourse/blogpage/3fa4f00bccebc3d6a3ae39b57fb4db12bdbb24c9/static/images/plot_convergence_diagnostics.svg)
 
@@ -232,19 +235,40 @@ no need of any adjustment.
 
 ![QQ-Plot](https://raw.githubusercontent.com/contracourse/blogpage/16e435c51f0931e54363c456a474fb7952860670/static/images/check_bart_error_assumptions.svg)
 
-The next plots show how well our model performs. We can provide a predictive
-range of 95% for each data point with an accuracy rate of approximately 90%.
-Additionally, we have the capability to calculate the RMSE and other metrics on
-the test set. It should be noted that the prediction intervals have a larger
-interval as compared to credible intervals since they take into account the
-uncertainty arising from the error term. The prediction interval tells us about
-the precision of our individual predictions, a credible interval gives us
-information about the likely range of true parameter values.
+The next plots show how well our model performs in-sample and out-of-sample.
+
+Bayesian statistics uses Credible intervals instead of Confidence intervals.
+Credible intervals provide a range of values where we can be certain that the
+true parameter lies within, given the available data and the assumptions of the
+model. The width of a credible interval reflects the amount of uncertainty in
+the prediction, with wider intervals indicating higher uncertainty. We can
+manually adjust the interval (default is 95%), a low interval means a wider
+grey bar of the uncertainty in the predictor. The out of sample chart is more
+important since it gives us an impression how well the model performs on the
+testing data. For the out-of-sample chart we can now provide a predictive
+range of each data point which is about 96% accurate given a 95% preditive interval.
+
+The Prediction intervals are drawn from the posterior distribution of the MCMC
+process described earlier, they are wider than the Credible intervals since they
+reflecting the uncertainty of the error term. Prediction interval tells us about
+the precision of our individual predictions, a Credible interval gives us
+information about the likely range of true parameter values. 
 
 ![plot-y vs y-hat](https://raw.githubusercontent.com/contracourse/blogpage/16e435c51f0931e54363c456a474fb7952860670/static/images/plot_y_vs_yhat_2.svg)
 
-Lastly, we can look at the most important variables in our model. The
-unemployment rate seems to be the most important followed with 
+## Conclusion
+
+Overall, BART is an interesting algorithm with some unique capabilities, but
+their suitability will depend on the complexity of the dataset and the task at
+hand. Sometimes a Bayesian approach is preferred since it does not find the
+single best value, rather a range of possible values determined by the posterior
+distribution. <br>
+
+BART can be compared to gradient algorithms like XGBoost or Catboost. BART may
+be more appropriate when dealing with complex nonlinear relationships, while
+XGBoost may be better suited for simpler problems where speed and scalability
+are important.
+
 
 
 <!-- ```
@@ -255,7 +279,7 @@ paste('r2:', rsq(y_test, y_pred)) # the R-squared y-test fit with predicted
 paste('rmse:', rmse(y_test, y_pred))
 cor.test(y_test, y_pred, method=c("pearson"))
 ``` -->
-Output
+<!-- Output
 ```
 [1] "r2: 0.938910704998679"
 [1] "rmse: 27.8567148747163"
@@ -270,6 +294,6 @@ alternative hypothesis: true correlation is not equal to 0
 sample estimates:
      cor 
 0.968974
-```
+``` -->
 
 </span>
