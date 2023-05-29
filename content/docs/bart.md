@@ -230,7 +230,7 @@ Next up, the “check_bart_error_assumptions” show us the error normality
 distribution using QQ-plots. We can see the residuals are normally distributed,
 no need of any adjustment. 
 
-{{< figure src="https://raw.githubusercontent.com/contracourse/blogpage/7ca4d56a664eedbfa5ab19ee4366e87699a8b541/static/images/check_bart_error_assumptions.svg" >}}
+![QQ-Plot](https://raw.githubusercontent.com/contracourse/blogpage/16e435c51f0931e54363c456a474fb7952860670/static/images/check_bart_error_assumptions.svg)
 
 The next plots show how well our model performs. We can provide a predictive
 range of 95% for each data point with an accuracy rate of approximately 90%.
@@ -241,7 +241,7 @@ uncertainty arising from the error term. The prediction interval tells us about
 the precision of our individual predictions, a credible interval gives us
 information about the likely range of true parameter values.
 
-{{< figure src="https://raw.githubusercontent.com/contracourse/blogpage/420c743729512917c969175cf05accd97ad01235/static/images/plot_y_vs_yhat_2.svg" >}}
+![plot-y vs y-hat](https://raw.githubusercontent.com/contracourse/blogpage/16e435c51f0931e54363c456a474fb7952860670/static/images/plot_y_vs_yhat_2.svg)
 
 Lastly, we can look at the most important variables in our model. The
 unemployment rate seems to be the most important followed with 
