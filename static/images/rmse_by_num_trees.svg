@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="httpgd" width="719.00" height="617.00" viewBox="0 0 575.20 493.60">
+<defs>
+  <style type='text/css'><![CDATA[
+    .httpgd line, .httpgd polyline, .httpgd polygon, .httpgd path, .httpgd rect, .httpgd circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+<clipPath id="c0"><rect x="0.00" y="0.00" width="575.20" height="493.60"/></clipPath>
+<clipPath id="c1"><rect x="59.04" y="59.04" width="485.92" height="361.12"/></clipPath>
+<clipPath id="c2"><rect x="0.00" y="0.00" width="575.20" height="493.60"/></clipPath>
+<clipPath id="c3"><rect x="59.04" y="59.04" width="485.92" height="361.12"/></clipPath>
+</defs>
+<rect width="100%" height="100%" style="stroke: none;fill: #FFFFFF;"/>
+<g clip-path="url(#c0)">
+</g><g clip-path="url(#c1)">
+<polyline points="77.04,287.77 114.53,295.12 152.02,292.47 189.52,250.86 227.01,322.49 264.51,231.02 302.00,282.95 339.49,286.58 376.99,299.31 414.48,239.60 451.98,255.74 489.47,295.43 526.96,280.75" style="stroke-width: 0.75;"/>
+<circle cx="77.04" cy="287.77" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="114.53" cy="295.12" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="152.02" cy="292.47" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="189.52" cy="250.86" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="227.01" cy="322.49" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="264.51" cy="231.02" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="302.00" cy="282.95" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="339.49" cy="286.58" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="376.99" cy="299.31" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="414.48" cy="239.60" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="451.98" cy="255.74" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="489.47" cy="295.43" r="2.70" style="stroke-width: 0.75;"/>
+<circle cx="526.96" cy="280.75" r="2.70" style="stroke-width: 0.75;"/>
+</g><g clip-path="url(#c2)">
+<line x1="114.53" y1="420.16" x2="489.47" y2="420.16" style="stroke-width: 0.75;"/>
+<line x1="114.53" y1="420.16" x2="114.53" y2="427.36" style="stroke-width: 0.75;"/>
+<line x1="189.52" y1="420.16" x2="189.52" y2="427.36" style="stroke-width: 0.75;"/>
+<line x1="264.51" y1="420.16" x2="264.51" y2="427.36" style="stroke-width: 0.75;"/>
+<line x1="339.49" y1="420.16" x2="339.49" y2="427.36" style="stroke-width: 0.75;"/>
+<line x1="414.48" y1="420.16" x2="414.48" y2="427.36" style="stroke-width: 0.75;"/>
+<line x1="489.47" y1="420.16" x2="489.47" y2="427.36" style="stroke-width: 0.75;"/>
+<g><text x="114.53" y="446.08" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">20</text></g>
+<g><text x="189.52" y="446.08" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">30</text></g>
+<g><text x="264.51" y="446.08" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">40</text></g>
+<g><text x="339.49" y="446.08" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">50</text></g>
+<g><text x="414.48" y="446.08" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">60</text></g>
+<g><text x="489.47" y="446.08" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">70</text></g>
+<line x1="59.04" y1="382.33" x2="59.04" y2="90.35" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="382.33" x2="51.84" y2="382.33" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="309.34" x2="51.84" y2="309.34" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="236.34" x2="51.84" y2="236.34" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="163.35" x2="51.84" y2="163.35" style="stroke-width: 0.75;"/>
+<line x1="59.04" y1="90.35" x2="51.84" y2="90.35" style="stroke-width: 0.75;"/>
+<g><text transform="translate(41.76,382.33) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">10</text></g>
+<g><text transform="translate(41.76,309.34) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">20</text></g>
+<g><text transform="translate(41.76,236.34) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">30</text></g>
+<g><text transform="translate(41.76,163.35) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">40</text></g>
+<g><text transform="translate(41.76,90.35) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="15.28px" lengthAdjust="spacingAndGlyphs">50</text></g>
+<polygon points="59.04,420.16 544.96,420.16 544.96,59.04 59.04,59.04" style="stroke-width: 0.75;" />
+<g><text x="302.00" y="34.77" text-anchor="middle" style="font-family: Arimo;font-size: 14.40px;font-weight: bold;" textLength="334.02px" lengthAdjust="spacingAndGlyphs">Out-Of-Sample RMSE by Number of Trees</text></g>
+<g><text x="302.00" y="474.88" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="98.68px" lengthAdjust="spacingAndGlyphs">Number of Trees</text></g>
+<g><text transform="translate(12.96,239.60) rotate(-90.00)" text-anchor="middle" style="font-family: Arimo;font-size: 12.00px;" textLength="126.50px" lengthAdjust="spacingAndGlyphs">Out-Of-Sample RMSE</text></g>
+</g><g clip-path="url(#c3)">
+<line x1="77.04" y1="337.88" x2="77.04" y2="237.66" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="114.53" y1="323.70" x2="114.53" y2="266.55" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="152.02" y1="324.74" x2="152.02" y2="260.20" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="189.52" y1="278.48" x2="189.52" y2="223.23" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="227.01" y1="345.75" x2="227.01" y2="299.24" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="264.51" y1="290.45" x2="264.51" y2="171.59" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="302.00" y1="315.97" x2="302.00" y2="249.93" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="339.49" y1="297.75" x2="339.49" y2="275.41" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="376.99" y1="335.75" x2="376.99" y2="262.87" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="414.48" y1="334.19" x2="414.48" y2="145.01" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="451.98" y1="290.38" x2="451.98" y2="221.09" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="489.47" y1="306.13" x2="489.47" y2="284.72" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+<line x1="526.96" y1="348.70" x2="526.96" y2="212.80" style="stroke-width: 0.07;stroke: #BEBEBE;"/>
+</g>
+</svg>

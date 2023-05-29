@@ -102,7 +102,10 @@ We can use a Bayesian approach to determine the model parameters. This
 approach allows us to incorporate our prior beliefs about the shape of
 trees and the overall ensemble structure into the model. After that, the
 algorithm will update the priors based on the data using an MCMC
-back-fitting technique.
+back-fitting technique. Monte Carlo Markov chain (MCMC) is commonly used in
+Bayesian statistics to approximate complex distributions in order to estimate
+the posterior distribution of model parameters. For further details see
+[here](https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50)
 
 **<u>BART</u>** utilizes similar tree boosting methods but
 through a Bayesian framework where predictions are drawn from a
@@ -213,9 +216,9 @@ rmse_by_num_trees(bart_machine,
 ![RMSE
 Tree-Plot](https://github.com/contracourse/blogpage/blob/main/static/images/rmse_by_num_trees.png?raw=true)
 
-As you can see it shows us the path of the trees with its respective rmse. I
-choose the trees with the minimum number of rmse and then run the “bartmachine”
-again.
+As you can see it shows us the path of the trees with its respective RMSE. Then
+we can use the trees with the minimum RMSE and run the `bartmachine` again.
+``bart_machine <- bartMachine(df_train, y_train, num_trees=35, seed=42)``
 
 Using the “plot_convergence_diagnostics” function we can see how the MCMC
 performs. Overall, the tree nodes perform relatively constant. On the top left,
