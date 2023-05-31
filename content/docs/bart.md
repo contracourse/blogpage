@@ -298,12 +298,19 @@ sample estimates:
 
 <h1 id='references'>References</h1>
 
-Coqueret, Guillaume, and Tony Guida. 2022. “Machine Learning for Factor Investing.” (http://www.mlfactor.com/bayes.html).
+Coqueret, G., & Guida, T. (2022, October 18). *Machine Learning for
+Factor Investing*. http://www.mlfactor.com/bayes.html
 
-Kapelner, Adam, and Justin Bleich. 2016. “BartMachine : Machine Learning with Bayesian Additive Regression Trees.” Journal of Statistical Software 70(4). doi: 10.18637/jss.v070.i04.
+Kapelner, A., & Bleich, J. (2016). **bartMachine**: Machine Learning
+with Bayesian Additive Regression Trees. *Journal of Statistical
+Software*, *70*(4). https://doi.org/10.18637/jss.v070.i04
 
-Koehrsen, Will. 2018. “Introduction to Bayesian Linear Regression.” (https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7).
+Koehrsen, W. (2018, April 14). *Introduction to Bayesian Linear
+Regression*.
+https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7
 
-Mamun, Osman. 2021. “A Primer to Bayesian Additive Regression Tree with R.” (https://towardsdatascience.com/a-primer-to-bayesian-additive-regression-tree-with-r-b9d0dbf704d).
+Mamun, O. (2021, May 3). *A Primer to Bayesian Additive Regression Tree
+with R*.
+https://towardsdatascience.com/a-primer-to-bayesian-additive-regression-tree-with-r-b9d0dbf704d
 
 </span>
