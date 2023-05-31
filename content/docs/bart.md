@@ -203,16 +203,15 @@ p-val for zero-mean noise: 0.97604
 
 We can use the “rmse_by_num_trees” function to find the optimum number of trees for the model.
 I’ve given it a sequence from 15 to 75 trees by 5 increments with 3 number of
-replicant trees.
+replicant trees. The RMSE tree chart is used in order to illustrate the predictive capacity of
+our model. With additional hyperparameter optimization we can build a better
+bartmachine model in the future.
 <br>
 ```
 rmse_by_num_trees(bart_machine, 
                   tree_list=c(seq(15, 75, by=5)),
                   num_replicates=3)
 ```
-The RMSE tree chart is used in order to illustrate the predictive capacity of
-our model. With additional hyperparameter optimization we can build a better
-bartmachine model in the future.
 
 ![RMSE
 Tree-Plot](https://raw.githubusercontent.com/contracourse/blogpage/3fa4f00bccebc3d6a3ae39b57fb4db12bdbb24c9/static/images/rmse_by_num_trees.svg)
