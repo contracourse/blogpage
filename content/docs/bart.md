@@ -201,15 +201,15 @@ p-val for shapiro-wilk test of normality of residuals: 0.77388
 p-val for zero-mean noise: 0.97604
 ```
 
-The default settings use a burn-in rate of 250 and 1000 iteration with 50 trees.
-All of those parameters can be specified manually. We can use the
-“rmse_by_num_trees” function to find the optimum number of trees for the model.
+We can use the “rmse_by_num_trees” function to find the optimum number of trees for the model.
 I’ve given it a sequence from 15 to 75 trees by 5 increments with 3 number of
 replicant trees.
- <br>``
+<br>
+```
 rmse_by_num_trees(bart_machine, 
                   tree_list=c(seq(15, 75, by=5)),
-                  num_replicates=3) `` <br>
+                  num_replicates=3)
+```
 The RMSE tree chart is used in order to illustrate the predictive capacity of
 our model. With additional hyperparameter optimization we can build a better
 bartmachine model in the future.
@@ -235,7 +235,7 @@ no need of any adjustment.
 
 ![QQ-Plot](https://raw.githubusercontent.com/contracourse/blogpage/16e435c51f0931e54363c456a474fb7952860670/static/images/check_bart_error_assumptions.svg)
 
-The next plots show how well our model performs in-sample and out-of-sample.
+Lastly, we will see how well our model performs in-sample and out-of-sample.
 
 Bayesian statistics uses Credible intervals instead of Confidence intervals.
 Credible intervals provide a range of values where we can be certain that the
