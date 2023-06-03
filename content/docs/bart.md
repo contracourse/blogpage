@@ -221,13 +221,13 @@ the Siqsq estimate converges after ~200 interactions inside the interval.
 The three subsequent plots separated by gray lines are the post-burn-in
 iterations from each of the three computing cores employed during model.
 
-![Plot-Diagnostics](https://raw.githubusercontent.com/contracourse/blogpage/1bf4db9d5b37636a0c5e4e1001ce7d1fb206fc2d/static/images/check_bart_error_assumptions.svg)
+![Plot-Diagnostics](https://raw.githubusercontent.com/contracourse/blogpage/d8166cedb681f34c95e01273ca188e3694ed9d93/static/images/plot_convergence_diagnostics.svg)
 
 Next up, the “check_bart_error_assumptions” show us the error normality
 distribution using QQ-plots. We can see the residuals are normally distributed,
 no need of any adjustment. 
 
-![QQ-Plot]()
+![QQ-Plot](https://raw.githubusercontent.com/contracourse/blogpage/d8166cedb681f34c95e01273ca188e3694ed9d93/static/images/check_bart_error_assumptions.svg)
 
 Lastly, we will see how well our model performs in-sample and out-of-sample.
 
@@ -248,7 +248,31 @@ reflecting the uncertainty of the error term. Prediction interval tells us about
 the precision of our individual predictions, a Credible interval gives us
 information about the likely range of true parameter values. 
 
-![plot-y vs y-hat](https://raw.githubusercontent.com/contracourse/blogpage/1bf4db9d5b37636a0c5e4e1001ce7d1fb206fc2d/static/images/plot_y_vs_yhat_2.svg)
+![plot-y vs y-hat](https://raw.githubusercontent.com/contracourse/blogpage/985cdbc3d4c208bb1341c45f020214089e3eab1a/static/images/plot_y_vs_yhat_2.svg)
+
+Now lets see how good our overall model is at making predition. 
+I've inserted the out-of-sample prediction into a dataframe. <br>
+``y_pred <- predict(bart_machine, df_test)``
+
+```
+summary(lm(y_test~y_pred))$r.squared
+sqrt(mean((y_test - y_pred)^2))
+cor.test(y_test, y_pred, method=c("pearson"))
+
+[1] 0.9364641 # R-squared
+[1] 0.5188173 # MSE
+
+        Pearson's product-moment correlation
+
+data:  y_test and y_pred
+t = 26.038, df = 46, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.9428118 0.9818702
+sample estimates:
+      cor 
+0.9677108 
+```
 
 ## Conclusion
 
@@ -264,29 +288,6 @@ XGBoost may be better suited for simpler problems where speed and scalability
 are important.
 
 
-
-<!-- ```
-> rmse <- function(x, y) sqrt(mean((x - y)^2))
-rsq <- function(x, y) summary(lm(y~x))$r.squared
-y_pred <- predict(bart_machine, df_test)
-paste('r2:', rsq(y_test, y_pred)) # the R-squared y-test fit with predicted 
-paste('rmse:', rmse(y_test, y_pred))
-cor.test(y_test, y_pred, method=c("pearson"))
-[1] "r2: 0.936464135306214"
-[1] "rmse: 0.518817265958296"
-
-        Pearson's product-moment correlation
-
-data:  y_test and y_pred
-t = 26.038, df = 46, p-value < 2.2e-16
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
- 0.9428118 0.9818702
-sample estimates:
-      cor 
-0.9677108 
-
-``` -->
 
 <h1 id='references'>References</h1>
 
