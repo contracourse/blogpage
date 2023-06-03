@@ -132,25 +132,26 @@ may not be apparent with simple summary statistics.
 
 ## Approach
 
-In this post I will use the R Package “bartMachine” to demonstrate the
-effectiveness of BART. bartMachine provides some interesting diagnostic features
-which I will describe later. I have gathered monthly economic data from FRED in
-order to forecast the SPY. I’m trying to develop a model for predicting the SPY
-based on some underlying economic data. My dataset can be
-seen as below starting from 2001 till end of 2022; the SPY is the predictive
+I’ve gathered some economic data from the FRED site (the “fredr” R-package,
+allows me to access the Fred database via an API) and I’m trying to develop a
+BART algorithm to forecast the unemployment rate for America from 2004 till end
+of 2022. 
+
+My dataset can be
+seen below, starting from 2004 until the end of 2022; the UNRATE is the predictive
 variable \\(\hat{y}\\) with the remaining independent variables \\(x\\).
 
 ```{r snippetName, echo=F}
-> str(data)
-Classes ‘data.table’ and 'data.frame':  264 obs. of  8 variables:
- $ T10Y3M            : num  -0.1243 0.0937 0.35 1.175 1.6882 ...
- $ EFFR              : num  6.02 5.51 5.32 4.81 4.23 ...
- $ UNRATE            : num  4.2 4.2 4.3 4.4 4.3 4.5 4.6 4.9 5 5.3 ...
- $ STLFSI4           : num  0.453 0.396 0.627 0.723 0.325 ...
- $ CPIAUCSL_PC1      : num  3.72 3.53 2.98 3.22 3.56 ...
- $ SPY               : num  90.4 81.8 77 83.8 83.3 ...
- $ 2y_expec_Inflation: num  0.0265 0.0263 0.0236 0.0258 0.0273 ...
- $ 1y_real_rate      : num  0.0313 0.0283 0.0362 0.024 0.0186 ...
+> str(data_frame)
+tibble [228 × 8] (S3: tbl_df/tbl/data.frame)
+ $ date              : Date[1:228], format: "2004-01-01" "2004-02-01" ...
+ $ UNRATE            : num [1:228] 5.7 5.6 5.8 5.6 5.6 5.6 5.5 5.4 5.4 5.5 ...
+ $ T10Y3M            : num [1:228] 3.25 3.14 2.87 3.39 3.68 3.45 3.14 2.78 2.44 2.3 ...
+ $ STLFSI4           : num [1:228] -0.42 -0.494 -0.446 -0.597 -0.501 ...
+ $ EFFR              : num [1:228] 1 1.01 1 1.01 1 1.03 1.27 1.43 1.62 1.76 ...
+ $ T5YIFR            : num [1:228] 2.49 2.43 2.45 2.52 2.74 2.65 2.55 2.49 2.4 2.36 ...
+ $ REAINTRATREARAT1YE: num [1:228] -0.1377 -0.4014 -0.0643 -0.4123 -0.5069 ...
+ $ CPIAUCSL          : num [1:228] 2.03 1.69 1.74 2.29 2.9 ...
 ```
 
 I split the data into training and testing using the R package “caret”,
@@ -159,8 +160,8 @@ the training set.
 
 ```{r snippetName, echo=F}
 library(caret)
-y <- data$SPY
-df <- within(data, rm(SPY))
+y <- data$UNRATE
+df <- within(data, rm(UNRATE))
 set.seed(42) 
 test_inds = createDataPartition(y = 1:length(y), p = 0.2, list = F)
 
@@ -186,19 +187,19 @@ data is not normally distributed.
 > summary(bart_machine)
 bartMachine v1.3.3.1 for regression
 
-training data size: n = 208 and p = 7 
-built in 0.9 secs on 3 cores, 50 trees, 250 burn-in and 1000 post. samples
+training data size: n = 180 and p = 6 
+built in 1.1 secs on 3 cores, 50 trees, 250 burn-in and 1000 post. samples
 
-sigsq est for y beforehand: 2046.61 
-avg sigsq estimate after burn-in: 78.62889 
+sigsq est for y beforehand: 2.141 
+avg sigsq estimate after burn-in: 0.06986 
 
 in-sample statistics:
- L1 = 666.8 
- L2 = 3483.97 
- rmse = 4.09 
- Pseudo-Rsq = 0.9984
-p-val for shapiro-wilk test of normality of residuals: 0.77388 
-p-val for zero-mean noise: 0.97604
+ L1 = 17.18 
+ L2 = 2.65 
+ rmse = 0.12 
+ Pseudo-Rsq = 0.9967
+p-val for shapiro-wilk test of normality of residuals: 0.81473 
+p-val for zero-mean noise: 0.91896 
 ```
 
 The default settings use a burn-in rate of 250 and 1000 iteration with 50 trees.
@@ -212,14 +213,14 @@ rmse_by_num_trees(bart_machine,
                   num_replicates=3) `` <br>
 The RMSE tree chart is used in order to illustrate the predictive capacity of
 our model. With additional hyperparameter optimization we can build a better
-bartmachine model in the future.
+bartmachine model in the future. <br>
 
 ![RMSE
 Tree-Plot](https://raw.githubusercontent.com/contracourse/blogpage/3fa4f00bccebc3d6a3ae39b57fb4db12bdbb24c9/static/images/rmse_by_num_trees.svg)
 
 As you can see it shows us the path of the trees with its respective RMSE. Then
-we can use the trees with the minimum RMSE and run the `bartmachine` again. <br>
-``bart_machine <- bartMachine(df_train, y_train, num_trees=35)``
+we can use the trees with the minimum RMSE and run the `bartmachine` again. The tree looks pretty static, an increase in the number of trees did not particular perform better. <br>
+``bart_machine <- bartMachine(df_train, y_train, num_trees=20)``
 
 Using the “plot_convergence_diagnostics” function we can see how the MCMC
 performs. Overall, the tree nodes perform relatively constant. On the top left,
@@ -272,28 +273,26 @@ are important.
 
 
 <!-- ```
-rmse <- function(x, y) sqrt(mean((x - y)^2))
+> rmse <- function(x, y) sqrt(mean((x - y)^2))
 rsq <- function(x, y) summary(lm(y~x))$r.squared
 y_pred <- predict(bart_machine, df_test)
 paste('r2:', rsq(y_test, y_pred)) # the R-squared y-test fit with predicted 
 paste('rmse:', rmse(y_test, y_pred))
 cor.test(y_test, y_pred, method=c("pearson"))
-``` -->
-<!-- Output
-```
-[1] "r2: 0.938910704998679"
-[1] "rmse: 27.8567148747163"
+[1] "r2: 0.936464135306214"
+[1] "rmse: 0.518817265958296"
 
         Pearson's product-moment correlation
 
 data:  y_test and y_pred
-t = 28.809, df = 54, p-value < 2.2e-16
+t = 26.038, df = 46, p-value < 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.9474239 0.9817738
+ 0.9428118 0.9818702
 sample estimates:
-     cor 
-0.968974
+      cor 
+0.9677108 
+
 ``` -->
 
 <h1 id='references'>References</h1>
