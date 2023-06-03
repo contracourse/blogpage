@@ -209,7 +209,7 @@ our model. With additional hyperparameter optimization we can build a better
 bartmachine model in the future. <br>
 
 ![RMSE
-Tree-Plot](https://raw.githubusercontent.com/contracourse/blogpage/3fa4f00bccebc3d6a3ae39b57fb4db12bdbb24c9/static/images/rmse_by_num_trees.svg)
+Tree-Plot](https://raw.githubusercontent.com/contracourse/blogpage/1bf4db9d5b37636a0c5e4e1001ce7d1fb206fc2d/static/images/rmse_by_num_trees.svg)
 
 As you can see it shows us the path of the trees with its respective RMSE. Then
 we can use the trees with the minimum RMSE and run the `bartmachine` again. The tree looks pretty static, an increase in the number of trees did not particular perform better. <br>
@@ -221,13 +221,13 @@ the Siqsq estimate converges after ~200 interactions inside the interval.
 The three subsequent plots separated by gray lines are the post-burn-in
 iterations from each of the three computing cores employed during model.
 
-![Plot-Diagnostics](https://raw.githubusercontent.com/contracourse/blogpage/3fa4f00bccebc3d6a3ae39b57fb4db12bdbb24c9/static/images/plot_convergence_diagnostics.svg)
+![Plot-Diagnostics](https://raw.githubusercontent.com/contracourse/blogpage/1bf4db9d5b37636a0c5e4e1001ce7d1fb206fc2d/static/images/check_bart_error_assumptions.svg)
 
 Next up, the “check_bart_error_assumptions” show us the error normality
 distribution using QQ-plots. We can see the residuals are normally distributed,
 no need of any adjustment. 
 
-![QQ-Plot](https://raw.githubusercontent.com/contracourse/blogpage/16e435c51f0931e54363c456a474fb7952860670/static/images/check_bart_error_assumptions.svg)
+![QQ-Plot]()
 
 Lastly, we will see how well our model performs in-sample and out-of-sample.
 
@@ -248,7 +248,7 @@ reflecting the uncertainty of the error term. Prediction interval tells us about
 the precision of our individual predictions, a Credible interval gives us
 information about the likely range of true parameter values. 
 
-![plot-y vs y-hat](https://raw.githubusercontent.com/contracourse/blogpage/16e435c51f0931e54363c456a474fb7952860670/static/images/plot_y_vs_yhat_2.svg)
+![plot-y vs y-hat](https://raw.githubusercontent.com/contracourse/blogpage/1bf4db9d5b37636a0c5e4e1001ce7d1fb206fc2d/static/images/plot_y_vs_yhat_2.svg)
 
 ## Conclusion
 
