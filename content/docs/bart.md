@@ -202,16 +202,9 @@ p-val for shapiro-wilk test of normality of residuals: 0.81473
 p-val for zero-mean noise: 0.91896 
 ```
 
-The default settings use a burn-in rate of 250 and 1000 iteration with 50 trees.
-All of those parameters can be specified manually. We can use the
-“rmse_by_num_trees” function to find the optimum number of trees for the model.
+We can use the “rmse_by_num_trees” function to find the optimum number of trees for the model.
 I’ve given it a sequence from 15 to 75 trees by 5 increments with 3 number of
-replicant trees.
- <br>``
-rmse_by_num_trees(bart_machine, 
-                  tree_list=c(seq(15, 75, by=5)),
-                  num_replicates=3) `` <br>
-The RMSE tree chart is used in order to illustrate the predictive capacity of
+replicant trees. The RMSE tree chart is used in order to illustrate the predictive capacity of
 our model. With additional hyperparameter optimization we can build a better
 bartmachine model in the future. <br>
 
@@ -236,7 +229,7 @@ no need of any adjustment.
 
 ![QQ-Plot](https://raw.githubusercontent.com/contracourse/blogpage/16e435c51f0931e54363c456a474fb7952860670/static/images/check_bart_error_assumptions.svg)
 
-The next plots show how well our model performs in-sample and out-of-sample.
+Lastly, we will see how well our model performs in-sample and out-of-sample.
 
 Bayesian statistics uses Credible intervals instead of Confidence intervals.
 Credible intervals provide a range of values where we can be certain that the
@@ -297,12 +290,19 @@ sample estimates:
 
 <h1 id='references'>References</h1>
 
-Coqueret, Guillaume, and Tony Guida. 2022. “Machine Learning for Factor Investing.” (http://www.mlfactor.com/bayes.html).
+Coqueret, G., & Guida, T. (2022, October 18). *Machine Learning for
+Factor Investing*. http://www.mlfactor.com/bayes.html
 
-Kapelner, Adam, and Justin Bleich. 2016. “BartMachine : Machine Learning with Bayesian Additive Regression Trees.” Journal of Statistical Software 70(4). doi: 10.18637/jss.v070.i04.
+Kapelner, A., & Bleich, J. (2016). **bartMachine**: Machine Learning
+with Bayesian Additive Regression Trees. *Journal of Statistical
+Software*, *70*(4). https://doi.org/10.18637/jss.v070.i04
 
-Koehrsen, Will. 2018. “Introduction to Bayesian Linear Regression.” (https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7).
+Koehrsen, W. (2018, April 14). *Introduction to Bayesian Linear
+Regression*.
+https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7
 
-Mamun, Osman. 2021. “A Primer to Bayesian Additive Regression Tree with R.” (https://towardsdatascience.com/a-primer-to-bayesian-additive-regression-tree-with-r-b9d0dbf704d).
+Mamun, O. (2021, May 3). *A Primer to Bayesian Additive Regression Tree
+with R*.
+https://towardsdatascience.com/a-primer-to-bayesian-additive-regression-tree-with-r-b9d0dbf704d
 
 </span>
