@@ -300,14 +300,15 @@ predicted values change as the selected input variable varies, while holding all
 other input variables at fixed values or averaging over their distribution. The
 PD is plotted in black and a default 95% credible intervals plotted in blue for
 the other  variables in the dataset. Points plotted are at the 5%ile, 10%ile,
-20%ile, . . . , 60%ile and 75%ile of the values of the predictor. 
-We can see as the EFFR increases the partial effect decreases. Which would be a
-negative relationship between the input variable and the predictor variable. In
-other words, as the value of X increases, the predicted value decreases. 
-Which would make sense as the Federal Reserve raises interest rates in order to
-combat inflation causing unemployment to increase relatively *(Note however, the
-relationship between unemployment, inflation and interest rates is much more
-complex and not always unambiguous).*
+20%ile, . . . , 60%ile and 75%ile of the values of the predictor. We can see as
+the EFFR increases the partial effect decreases. Which would be a negative
+relationship between the input variable and the predictor variable. In other
+words, as the value of X increases, the predicted value decreases. This
+indicates that the increased Federal Funds rate is positively associated with
+higher unemployment. <br> *Note: It is important to note that interpreting partial
+dependence plots requires considering the specific context of the data and the
+model.*
+
 
 ![pd-plot](https://raw.githubusercontent.com/contracourse/blogpage/2ca75f5a98ad698ad2e4cef0b281ba7b3179cca7/static/images/pd_plot.svg)
 
