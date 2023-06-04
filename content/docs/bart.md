@@ -108,11 +108,10 @@ Bayesian statistics to approximate complex distributions in order to estimate
 the posterior distribution of model parameters. For further details see
 [here](https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50)
 
-**<u>BART</u>** utilizes similar tree boosting methods but
-through a Bayesian framework where predictions are drawn from a
-posterior distribution, which is a probability distribution of model
-parameters given the observed data. 
-The BART model can be expressed as follows: 
+Bayesian Additive Regression Trees *<u>(BART)</u>* utilizes similar tree
+boosting methods but through a Bayesian framework where predictions are drawn
+from a posterior distribution, which is a probability distribution of model
+parameters given the observed data. The BART model can be expressed as follows: 
 
 $$
 \begin{equation}
@@ -132,32 +131,31 @@ trees composed from the tree structure denoted as \\(T\\), and the terminal node
 structure and leaf parameter.
 
 Additive regression trees have splitting nodes that gives you smaller
-prediction spaces and by adding them up it gives you get a better
+prediction spaces by adding them up leaving a better
 picture of the overall prediction space. You have a bunch of weak
 learners to get a clear picture of the whole. You are taking each small
 part of the regression tree that outputs a weak learner by itself and
 adding them up to get a bigger picture. To address the overfitting
-problem, the Bayesian approach here penalize against it through
-regularization prior, in the same the regularization term does in the
-boosting algorithm. Data goes through each tree, only the residual flows
+problem, the Bayesian approach penalizes against it through
+regularization priors. In the same way the regularization term does for the
+boosting algorithms. Data goes through each tree and only the residual flows
 to the next tree, the regularization prior balances the data in order to
-prevent overfitting. 
+prevent overfitting.
 
 BART uses non-parametric regression models which is commonly used when
 relationships between variables are more complex and difficult to
-express. Non-parametric can also be useful for exploratory data
+express. Non-parametric regression can also be useful for exploratory data
 analysis, as they can help to identify patterns and relationships that
 may not be apparent with simple summary statistics.
 
 ## Approach
 
-I’ve gathered some economic data from the FRED site (the “fredr” R-package,
-allows me to access the Fred database via an API) and I’m trying to develop a
-BART algorithm to forecast the unemployment rate for America from 2004 till end
-of 2022. 
+I’ve gathered some economic data from the FRED site (the “fredr” R-package 
+allows you to access the Fred database via an API) and I’m trying to develop a
+BART algorithm to forecast the unemployment rate for America.
 
 My dataset can be
-seen below, starting from 2004 until the end of 2022; the UNRATE is the predictive
+seen below. Observation starting from 2004 until the end of 2022; the UNRATE is the predictive
 variable \\(\hat{y}\\) with the remaining independent variables \\(x\\).
 
 ```{r snippetName, echo=F}
@@ -190,7 +188,7 @@ df_train = df[-test_inds, ]
 y_train = y[-test_inds]
 ```
 Now running bartMachine on the training data ``bart_machine =
-bartMachine(df_train, y_train)``. The default settings uses a burn-in rate of
+bartMachine(df_train, y_train)``. The default MCMC uses a burn-in rate of
 250 and 1000 iteration with 50 trees. All of those parameters can be specified
 manually. <br>
 BART uses L1 & L2 regularization to reduce overfitting, introduce penalties and
@@ -221,28 +219,31 @@ p-val for shapiro-wilk test of normality of residuals: 0.81473
 p-val for zero-mean noise: 0.91896 
 ```
 
-We can use the “rmse_by_num_trees” function to find the optimum number of trees for the model.
-I’ve given it a sequence from 15 to 75 trees by 5 increments with 3 number of
-replicant trees. The RMSE tree chart is used in order to illustrate the predictive capacity of
-our model. With additional hyperparameter optimization we can build a better
-bartmachine model in the future. <br>
+We can use the “rmse_by_num_trees” function to find the optimum number of trees
+for the model. I’ve given it a sequence from 15 to 75 trees by 5 increments with
+3 number of replicant trees. The RMSE tree chart is used in order to illustrate
+the out-of-sample predictive capacity of our model. With additional
+hyperparameter optimization we can build a better bartmachine model in the
+future. <br>
 
 ![RMSE
 Tree-Plot](https://raw.githubusercontent.com/contracourse/blogpage/1bf4db9d5b37636a0c5e4e1001ce7d1fb206fc2d/static/images/rmse_by_num_trees.svg)
 
 As you can see it shows us the path of the trees with its respective RMSE. Then
-we can use the trees with the minimum RMSE and run the `bartmachine` again. The tree looks pretty static, an increase in the number of trees did not particular perform better. <br>
+we can use the trees with the minimum RMSE and run the `bartmachine` again. The
+tree looks pretty static, an increase in the number of trees did not particularly
+perform better. <br>
 ``bart_machine <- bartMachine(df_train, y_train, num_trees=20)``
 
 Using the “plot_convergence_diagnostics” function we can see how the MCMC
 performs. Overall, the tree nodes perform relatively constant. On the top left,
 the Siqsq estimate converges after ~200 interactions inside the interval.
 The three subsequent plots separated by gray lines are the post-burn-in
-iterations from each of the three computing cores employed during model.
+iterations from each of the three computing cores employed during the model.
 
 ![Plot-Diagnostics](https://raw.githubusercontent.com/contracourse/blogpage/d8166cedb681f34c95e01273ca188e3694ed9d93/static/images/plot_convergence_diagnostics.svg)
 
-Next up, the “check_bart_error_assumptions” show us the error normality
+Next up, the “check_bart_error_assumptions” chart show us the error normality
 distribution using QQ-plots. We can see the residuals are normally distributed,
 no need of any adjustment. 
 
@@ -259,12 +260,12 @@ manually adjust the interval (default is 95%), a low interval means a wider
 grey bar of the uncertainty in the predictor. The out of sample chart is more
 important since it gives us an impression how well the model performs on the
 testing data. For the out-of-sample chart we can now provide a predictive
-range of each data point which is about 90% accurate given a 85% credible interval.
+range of each data point which is about 85% accurate given a 90% credible interval.
 
 The Prediction intervals are drawn from the posterior distribution of the MCMC
 process described earlier, they are wider than the Credible intervals since they
-reflecting the uncertainty of the error term. Prediction interval tells us about
-the precision of our individual predictions, a Credible interval gives us
+reflecting the uncertainty of the error term. Prediction intervals tells us
+about the precision of our individual predictions, a Credible interval gives us
 information about the likely range of true parameter values. As you can see
 below, the posterior of each prediction is getting larger as the unemployment
 rate increases. This reflects the uncertainty around the prediction value on the
@@ -272,11 +273,12 @@ independent variable.  If the distribution is wide or has high variance, then
 the posterior for that prediction will be larger. This is common in models with
 high levels of noise or when the data points are widely spread out. Therefore,
 it is important to consider the overall distribution of the target values and
-the model's accuracy when interpreting the size of the posterior I've chose a
-lower CI (90%) since the posterior distributions are getting larger the higher
-the unemployment rate goes. I've chose a CI of 90%, a lower CI results in less
-predictive values being captured by the model and resulting in a lower boundary
-or limit of the prediction range.
+the model's accuracy when interpreting the size of the posterior. <br> I've
+chosen a CI of 90% since the posterior distributions are getting larger with a
+higher unemployment rates, reflecting the high degree of uncertainty around
+these values. A lower CI results in less predictive values that are being
+captured by the model and resulting in a lower boundary or limit of the
+prediction range.
 
 ![plot-y vs y-hat](https://raw.githubusercontent.com/contracourse/blogpage/985cdbc3d4c208bb1341c45f020214089e3eab1a/static/images/plot_y_vs_yhat_2.svg)
 
@@ -312,9 +314,8 @@ variable has the most significant influence on the model's predictions.
 ![var_importance](https://raw.githubusercontent.com/contracourse/blogpage/2ca75f5a98ad698ad2e4cef0b281ba7b3179cca7/static/images/importance%20plot.svg)
 
 Then we can choose the most important variable (in this case the EFFR-rate) and
-look at the partial depence plot. The PD-Plot shows us how the target variable's
-predicted values change as the selected input variable varies, while holding all
-other input variables at fixed values or averaging over their distribution. The
+look at the partial dependence plot. The PD-Plot shows us how the target variable's
+predicted values change as the selected input variable varies. The
 PD is plotted in black and a default 95% credible intervals plotted in blue for
 the other  variables in the dataset. Points plotted are at the 5%ile, 10%ile,
 20%ile, . . . , 60%ile and 75%ile of the values of the predictor. We can see as
