@@ -96,7 +96,9 @@ Most common machine learning algorithms are using a similar basic
 objective function which is based on a ***frequentist approach***
 towards statistics. The Bayesian approach treats the models in terms of
 a probability distribution, instead of giving you an exact output
-parameter.
+parameter. It is based on the following formula. <br>
+
+$$P[A|B]=\frac{P[A \cap B]}{P[B]}$$
 
 We can use a Bayesian approach to determine the model parameters. This
 approach allows us to incorporate our prior beliefs about the shape of
@@ -240,27 +242,38 @@ manually adjust the interval (default is 95%), a low interval means a wider
 grey bar of the uncertainty in the predictor. The out of sample chart is more
 important since it gives us an impression how well the model performs on the
 testing data. For the out-of-sample chart we can now provide a predictive
-range of each data point which is about 96% accurate given a 95% preditive interval.
+range of each data point which is about 90% accurate given a 85% credible interval.
 
 The Prediction intervals are drawn from the posterior distribution of the MCMC
 process described earlier, they are wider than the Credible intervals since they
 reflecting the uncertainty of the error term. Prediction interval tells us about
 the precision of our individual predictions, a Credible interval gives us
-information about the likely range of true parameter values. 
+information about the likely range of true parameter values. As you can see
+below, the posterior of each prediction is getting larger as the unemployment
+rate increases. This reflects the uncertainty around the prediction value on the
+independent variable.  If the distribution is wide or has high variance, then
+the posterior for that prediction will be larger. This is common in models with
+high levels of noise or when the data points are widely spread out. Therefore,
+it is important to consider the overall distribution of the target values and
+the model's accuracy when interpreting the size of the posterior I've chose a
+lower CI (90%) since the posterior distributions are getting larger the higher
+the unemployment rate goes. I've chose a CI of 90%, a lower CI results in less
+predictive values being captured by the model and resulting in a lower boundary
+or limit of the prediction range.
 
 ![plot-y vs y-hat](https://raw.githubusercontent.com/contracourse/blogpage/985cdbc3d4c208bb1341c45f020214089e3eab1a/static/images/plot_y_vs_yhat_2.svg)
 
-Now lets see how good our overall model is at making predition. 
-I've inserted the out-of-sample prediction into a dataframe. <br>
+Lastly, we can calculate some metrics to compare our bartmachine precitions with the testset.
+I've inserted the out-of-sample prediction into a dataframe and then calculated the ratios below. <br>
 ``y_pred <- predict(bart_machine, df_test)``
 
 ```
 summary(lm(y_test~y_pred))$r.squared
 sqrt(mean((y_test - y_pred)^2))
-cor.test(y_test, y_pred, method=c("pearson"))
+cor.test(y_test, y_pred, method=c("pearson"))   # Pearson R-squared  
 
-[1] 0.9364641 # R-squared
-[1] 0.5188173 # MSE
+[1] 0.9364641 # R-squared 
+[1] 0.5188173 # RMSE
 
         Pearson's product-moment correlation
 
@@ -273,6 +286,31 @@ sample estimates:
       cor 
 0.9677108 
 ```
+
+
+### Additional Diagnostic Charts 
+In addition, bartmachine allows us to see the same kind of variable importance
+plot as xgboost. Running the “investigate_var_importance” function to see which
+variable has the most significant influence on the model's predictions.
+![var_importance](https://raw.githubusercontent.com/contracourse/blogpage/2ca75f5a98ad698ad2e4cef0b281ba7b3179cca7/static/images/importance%20plot.svg)
+
+Then we can choose the most important variable (in this case the EFFR-rate) and
+look at the partial depence plot. The PD-Plot shows us how the target variable's
+predicted values change as the selected input variable varies, while holding all
+other input variables at fixed values or averaging over their distribution. The
+PD is plotted in black and a default 95% credible intervals plotted in blue for
+the other  variables in the dataset. Points plotted are at the 5%ile, 10%ile,
+20%ile, . . . , 60%ile and 75%ile of the values of the predictor. 
+We can see as the EFFR increases the partial effect decreases. Which would be a
+negative relationship between the input variable and the predictor variable. In
+other words, as the value of X increases, the predicted value decreases. 
+Which would make sense as the Federal Reserve raises interest rates in order to
+combat inflation causing unemployment to increase relatively *(Note however, the
+relationship between unemployment, inflation and interest rates is much more
+complex and not always unambiguous).*
+
+![pd-plot](https://raw.githubusercontent.com/contracourse/blogpage/2ca75f5a98ad698ad2e4cef0b281ba7b3179cca7/static/images/pd_plot.svg)
+
 
 ## Conclusion
 
