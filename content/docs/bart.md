@@ -97,9 +97,7 @@ Most common machine learning algorithms are using a similar basic
 objective function which is based on a ***frequentist approach***
 towards statistics. The Bayesian approach treats the models in terms of
 a probability distribution, instead of giving you an exact output
-parameter. It is based on the following formula. <br>
-
-$$P[A|B]=\frac{P[A \cap B]}{P[B]}$$
+parameter. 
 
 We can use a Bayesian approach to determine the model parameters. This
 approach allows us to incorporate our prior beliefs about the shape of
@@ -113,7 +111,25 @@ the posterior distribution of model parameters. For further details see
 **<u>BART</u>** utilizes similar tree boosting methods but
 through a Bayesian framework where predictions are drawn from a
 posterior distribution, which is a probability distribution of model
-parameters given the observed data.
+parameters given the observed data. 
+The BART model can be expressed as follows: 
+
+$$
+\begin{equation}
+Y = f(X) + E ≈ T^M_1
+(X) + T^M_2
+(X) + . . . + T^M_m (X) + \varepsilon, 
+\hspace{0.5cm}
+\varepsilon ∼ N_n
+(0, σ^2I_n)
+\end{equation}
+$$
+
+\\(Y\\) represent a \\(n * 1 \\)  vector of the response variable and \\(X\\) is the \\(n * p \\) matrix of
+predictor columns. The \\(\epsilon\\) is the error vector. The \\(m\\) is the number of regression
+trees composed from the tree structure denoted as \\(T\\), and the terminal nodes
+(leaves) denoted by \\(M\\), representing together an entire tree as \\(T^M\\) with the
+structure and leaf parameter.
 
 Additive regression trees have splitting nodes that gives you smaller
 prediction spaces and by adding them up it gives you get a better
