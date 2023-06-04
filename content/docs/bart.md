@@ -115,7 +115,7 @@ parameters given the observed data. The BART model can be expressed as follows:
 
 $$
 \begin{equation}
-Y = f(X) + E ≈ T^M_1
+Y = f(X) + \varepsilon ≈ T^M_1
 (X) + T^M_2
 (X) + . . . + T^M_m (X) + \varepsilon, 
 \hspace{0.5cm}
