@@ -181,12 +181,8 @@ y <- data$UNRATE
 df <- within(data, rm(UNRATE))
 set.seed(42) 
 test_inds = createDataPartition(y = 1:length(y), p = 0.2, list = F)
-
-df_test = df[test_inds, ]
-y_test = y[test_inds]
-df_train = df[-test_inds, ]
-y_train = y[-test_inds]
 ```
+
 Now running bartMachine on the training data ``bart_machine =
 bartMachine(df_train, y_train)``. The default MCMC uses a burn-in rate of
 250 and 1000 iteration with 50 trees. All of those parameters can be specified
