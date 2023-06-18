@@ -6,5 +6,6 @@ summary: "About"
 ShowToc: false
 ---
 
-This is a test
-
+I’m Kai Brüning, currently working in Germany at an accounting company, in my free time I analyze 
+financial markets and global macro environments. 
+You are free to check out my CV below:

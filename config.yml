@@ -1,6 +1,6 @@
 baseURL: "https://contracourse.github.io/blogpage/"
 languageCode: en-us
-title: Blog
+title: Home
 theme: PaperMod
 
 params:
