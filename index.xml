@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Apr 2023 18:38:43 +0200</lastBuildDate><atom:link href="https://contracourse.github.io/blogpage/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About me</title>
+      <link>https://contracourse.github.io/blogpage/about/</link>
+      <pubDate>Sun, 18 Jun 2023 20:01:56 +0200</pubDate>
+      
+      <guid>https://contracourse.github.io/blogpage/about/</guid>
+      <description>About</description>
+    </item>
+    
+    <item>
       <title>Banking</title>
       <link>https://contracourse.github.io/blogpage/docs/banking/</link>
       <pubDate>Sun, 09 Apr 2023 18:38:43 +0200</pubDate>
