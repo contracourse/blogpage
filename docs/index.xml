@@ -6,18 +6,7 @@
     <description>Recent content in Docs on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Apr 2023 18:38:43 +0200</lastBuildDate><atom:link href="https://contracourse.github.io/blogpage/docs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Banking</title>
-      <link>https://contracourse.github.io/blogpage/docs/banking/</link>
-      <pubDate>Sun, 09 Apr 2023 18:38:43 +0200</pubDate>
-      
-      <guid>https://contracourse.github.io/blogpage/docs/banking/</guid>
-      <description>80% of bank in lending in the US und the UK are mortgages, because the general prosperity is raising therefore pushing up property prices in general.
-The key to understand the financial sector&amp;rsquo;s strategy is that its activities and revenue do not constitute a part of real economic growth, but a subtrahend paid out of the economic surplus.
-Most of the wealth for families has stemmed from the debt-leveraged price of their homes.</description>
-    </item>
-    
+    <lastBuildDate>Sun, 09 Apr 2023 18:29:50 +0200</lastBuildDate><atom:link href="https://contracourse.github.io/blogpage/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Examining Bayesian Additive Regression Trees for Unemployment Rate Prediction</title>
       <link>https://contracourse.github.io/blogpage/docs/bart/</link>
@@ -30,12 +19,12 @@ O ij = &amp;#x2211; i = 1 I loss ( y i , y &amp;#x007E; i ) &amp;#x23DF; error t
     </item>
     
     <item>
-      <title>Test</title>
-      <link>https://contracourse.github.io/blogpage/docs/test/</link>
+      <title>Bank profitability and the rise of Non-Banks</title>
+      <link>https://contracourse.github.io/blogpage/docs/non-banks/</link>
       <pubDate>Sun, 09 Apr 2023 17:46:13 +0200</pubDate>
       
-      <guid>https://contracourse.github.io/blogpage/docs/test/</guid>
-      <description>This is a testpage This is a test</description>
+      <guid>https://contracourse.github.io/blogpage/docs/non-banks/</guid>
+      <description>Structural challenges for banks profitability The banking system is undergoing historic structural changes</description>
     </item>
     
   </channel>
