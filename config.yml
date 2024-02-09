@@ -6,9 +6,9 @@ theme: PaperMod
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Kais Blog
-  description: "This is the website of Kai Brüning, BSc. and I create content on Finance and Machine Learning"
+  description: "This is the website of Kai, BSc. and I create content on Finance and Machine Learning"
   keywords: [Blog, Economics, Finance, Machine Learning]
-  author: Kai Brüning
+  author: Kai
   # author: ["Me", "You"] # multiple authors
   #images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
