@@ -38,7 +38,7 @@ params:
   homeInfoParams:
     enabled: true # needs to be explicitly set
     title: "Welcome! \U0001F44B"
-    Content: "This is the website of **Kai Brüning** and
+    Content: "This is the website of **Kai** and
     I create content on finance and Machine Learning."
   socialIcons:
     - name: linkedin
