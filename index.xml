@@ -27,15 +27,6 @@ Introduction Gradient boosting methods are commonly used in the Machine Learning
 O ij = &amp;#x2211; i = 1 I loss ( y i , y &amp;#x007E; i ) &amp;#x23DF; error term + &amp;#x2211; j = 1 J &amp;#x03BB; ( T j ) &amp;#x23DF; regularization term Most common machine learning algorithms are using a similar basic objective function which is based on a frequentist approach towards statistics.</description>
     </item>
     
-    <item>
-      <title>Bank profitability and the rise of Non-Banks</title>
-      <link>https://contracourse.github.io/blogpage/docs/non-banks/</link>
-      <pubDate>Sun, 09 Apr 2023 17:46:13 +0200</pubDate>
-      
-      <guid>https://contracourse.github.io/blogpage/docs/non-banks/</guid>
-      <description>Structural challenges for banks profitability The banking system is undergoing historic structural changes</description>
-    </item>
-    
     
   </channel>
 </rss>
